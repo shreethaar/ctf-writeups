@@ -1,0 +1,3 @@
+The rogue component is communicating with an external entity, which is a big red flag in ICS environments. Can you find the flag from the network data?(use network.pcapng)
+
+

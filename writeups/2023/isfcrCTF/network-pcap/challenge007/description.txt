@@ -1,0 +1,2 @@
+The file shows communication between a PLC and an ICS workstation. Analyze the file to get the flag! (use modbus.pcapng). flag format: CTF{}
+

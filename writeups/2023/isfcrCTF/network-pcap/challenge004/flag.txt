@@ -1,0 +1,3 @@
+w1r3hark login: nn00tt
+
+flag: isfcr{nn00tt}
