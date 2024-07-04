@@ -7,7 +7,7 @@ layout: default
 
 This repository contains write ups for CTFs that I attended.
 
-Check out my other work on my <a href="https://washi1337.github.io/">website</a>.
+Check out my other work on my <a href="https://shreethaar.github.io/">website</a>.
 
 ## Disclaimer
 
