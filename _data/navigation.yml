@@ -29,4 +29,13 @@
         - name: challenge011
           link: 11
 
+- name: 2024
+  link: /writeups/2024
+  items:
+    - name: picoCTF
+      link: picoCTF-2024
+      items:
+        - name: forensic
+          link: forensic
+
 
