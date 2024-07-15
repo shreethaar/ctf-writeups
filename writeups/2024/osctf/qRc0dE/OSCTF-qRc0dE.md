@@ -16,7 +16,8 @@ Outcome:
 
 4. Use https://merri.cx/qrazybox/ to extract the QR code Information using the tools (tired mobile scanning & zbarimg doesn't work)
 ![](./Pasted%20image%2020240714021106.png)
-5. After extracting the information, you will received the flag string. 
+
+6. After extracting the information, you will received the flag string. 
 
 ![](./2024-07-13-061137_hyprshot.png)
 Flag: **OSCTF{r3c0v3R_qR_C0de_1s_s0_fUn}**, i might damage some bits while recovering it, so manage to get back the correct flag string with assumptions.
