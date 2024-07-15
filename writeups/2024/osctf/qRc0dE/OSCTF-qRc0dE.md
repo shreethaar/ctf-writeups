@@ -3,7 +3,7 @@
 ### Author: @Deit
 ### Challenge File:
 
-!(https://github.com/shreethaar/ctf-writeups/blob/master/writeups/2024/osctf/qRc0dE/342657695-a44bb302-4a00-4667-ae22-d6c1919992fc%20(1).jpg)
+! (https://github.com/shreethaar/ctf-writeups/blob/master/writeups/2024/osctf/qRc0dE/342657695-a44bb302-4a00-4667-ae22-d6c1919992fc%20(1).jpg)
 
 **Reference: https://github.com/pwning/public-writeup/blob/master/mma2015/misc400-qr/writeup.md**
 
