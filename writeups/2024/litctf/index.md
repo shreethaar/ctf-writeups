@@ -2,6 +2,8 @@
 
 - Link: [LIT-CTF Page](https://lit.lhsmathcs.org/)
 
+Lexington Informatics Tournament CTF 2024 is a Jeopardy-style, beginner-friendly online CTF that's open to everyone. It is hosted by the LexMACS club from Lexington High School.
+
 ## Challenges:
 
 |No.|Challenge|Category|
