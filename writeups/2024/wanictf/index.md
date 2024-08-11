@@ -1,6 +1,8 @@
 # WaniCTF 2024
 
-<a href=logo.png"><img src=logo.png"></a>
+<a href="logo.png">
+    <img src="logo.png" alt="WaniCTF 2024 Logo">
+</a>
 
 The challenges are presented in the following six categories:
 
