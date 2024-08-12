@@ -11,7 +11,7 @@ I made a cool program to show the flag, but i forgot to output it! Now that I lo
 
 Solution:
 
-## 1. Static Analysis
+### 1. Static Analysis
 
 <a href="image1.png">
     <img src="image1.png" alt="Static Analysis">
@@ -19,7 +19,7 @@ Solution:
 
 Since the executable is not stripped, where we can analyze the debugging symbols which has the possibility of containing the flag string
 
-## 2. Use $strings and $grep
+### 2. Use $strings and $grep
 
 <a href="image2.png">
     <img src="image2.png" alt="Debug Symbols">
