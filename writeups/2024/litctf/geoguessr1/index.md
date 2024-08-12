@@ -10,7 +10,7 @@ Where is this? Flag format: Use three decimal points of precision and round. The
 - Category: misc
 - Challenge Image:
 <a href="geoguessr1.jpg">
-    <img src="geoguessr1.jpg" alt="Location OSINT Image">
+    <img src="geoguessr1.jpg" alt="Location OSINT Image" style="width: 50%; height: 50%;">
 </a>
 
 Solution:
@@ -18,7 +18,7 @@ Solution:
 ##### 1. Use Yandex Reverse Image Search
 
 <a href="image1.png">
-    <img src="image1.png" alt="Yandex Reverse Search">
+    <img src="image1.png" alt="Yandex Reverse Search" style="width: 70%; height: 70%;">
 </a>
 
 From the result, the location of the image is Daxi Bridge, Taiwan. Next, using Google Maps Street View to figure out the exact position and GPS coordinates that image was taken from.
