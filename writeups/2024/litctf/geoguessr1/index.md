@@ -9,6 +9,7 @@ Where is this? Flag format: Use three decimal points of precision and round. The
 
 - Category: misc
 - Challenge Image:
+
 <a href="geoguessr1.jpg">
     <img src="geoguessr1.jpg" alt="Location OSINT Image" style="width: 50%; height: 50%;">
 </a>
