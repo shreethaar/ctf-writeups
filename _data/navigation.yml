@@ -52,8 +52,9 @@
     - name: lit-ctf
       link: litctf
       items:
-        - name:
-          link:
+        - name: forgotten-message
+          link: forgotten-message
+          
 
 
 
