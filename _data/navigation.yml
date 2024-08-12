@@ -54,7 +54,14 @@
       items:
         - name: forgotten-message
           link: forgotten-message
-          
+        - name: geoguessr1
+          link: geoguessr1
+        - name: geoguessr2
+          link: geoguessr2
+        - name: a-little-bit-of-tomcroppery
+          link: a-little-bit-of-tomcroppery
+        - name: endless
+          link: endless
 
 
 
