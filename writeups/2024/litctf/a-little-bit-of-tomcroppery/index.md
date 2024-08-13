@@ -6,8 +6,8 @@ layout: default
 # a little bit of tomcroppery
 Once you crop an image, the cropped part is gone... right???
 
-Category: misc
-Challenge File: image.png
+- Category: misc
+- Challenge File: image.png
 
 <img src="image.png" alt="challenge-file" style="width: 50%; height: auto;">
 
