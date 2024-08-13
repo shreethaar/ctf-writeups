@@ -10,8 +10,8 @@ Our history class recently took a walk on a field trip here. Where is this? Flag
 - Category: misc
 - Challenge Image:
 
-<a href="geoguessr1.jpg">
-    <img src="geoguessr1.jpg" alt="Location OSINT Image" style="width: 50%; height: 50%;">
+<a href="geoguessr2.jpg">
+    <img src="geoguessr2.jpg" alt="Location OSINT Image" style="width: 50%; height: 50%;">
 </a>
 
 ### Solution:
