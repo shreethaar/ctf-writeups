@@ -14,7 +14,7 @@ Whoops! I deleted the file ending of this file, and now I can't seem to figure o
 ##### 1. Use file command to know intended file format
 
 <a href="image1.png">
-    <img src="image1.png" alt="Metadata analysis" style="width: 50%; height: 50%;">
+    <img src="image1.png" alt="Metadata analysis" style="width: 90%; height: 90%;">
 </a>
 
 The file command shows that the file is an MP3 audio file, we can rename it with proper file extension
