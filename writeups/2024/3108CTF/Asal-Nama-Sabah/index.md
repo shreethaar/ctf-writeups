@@ -25,14 +25,18 @@ $ mv Asal_Nama_Sabah.exe Asal_Nama_Sabah && chmod +x Asal_Nama_Sabah
 ```
 
 ##### 3. Run strings to gather any information
-
-
+```sh
+$ strings Asal_Nama_Sabah
+```
 
 ##### 4. Run the binary
+```sh
+$ ./Asal_Nama_Sabah
+Enter the flag:
+```
 
+##### 5. Use the disassembler to view pseudocode and function used in the binary
 
-
-##### 5. Use the disassembler 
 
 
 
@@ -44,11 +48,11 @@ $ mv Asal_Nama_Sabah.exe Asal_Nama_Sabah && chmod +x Asal_Nama_Sabah
 ##### 7. Analyze the check\_flag() function
 ```c
  strcpy(s2, "5d505d591a20552e47293d325c3e3159291c");
-  strcpy(s, "namaasalsabah");
+ strcpy(s, "namaasalsabah");
   v4 = strlen(s);
   for ( i = 0; i <= 0x24; ++i )
-    s2[i] ^= s[(int)i % v4];
-  if ( !strcmp(a1, s2) )
+    s2[i] ^= s[(int)i % v4];   //XOR happens here
+  if ( !strcmp(a1, s2) )       
     return printf("Correct! The flag is: %s\n", s2);
   else
     return puts("Wrong! Try again.");
@@ -72,7 +76,6 @@ s2_byte = bytes.fromhex(s2)
 flag = xor(s2_byte.decode('latin1'), s)
 print("flag:",flag)
 ```
-
 
 **Flag:** `3108{S4B4H_S4PP4H}`
 
