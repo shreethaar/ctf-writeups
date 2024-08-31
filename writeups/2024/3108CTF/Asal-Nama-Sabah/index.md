@@ -13,13 +13,16 @@ Setiap negeri mempunyai asal nama negeri tersebut. Begitu juga dengan negeri Sab
 ### Solution:
 
 ##### 1. Use file command to analyze the binary
-
-
+```sh
+$ file Asal_Nama_Sabah.exe 
+Asal_Nama_Sabah.exe: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=950e7949238a5f9fb61caa5d8735ac78615b2814, for GNU/Linux 3.2.0, not stripped
+```
 It seems the extension showing .exe suggests a Windows executable file, but the output of the file command indicates that it is actually a Linux ELF (Executable and Linkable Format) file. 
 
-
 ##### 2. Remove the .exe extension and give execution permission to the binary
-
+```sh
+$ mv Asal_Nama_Sabah.exe Asal_Nama_Sabah && chmod +x Asal_Nama_Sabah
+```
 
 ##### 3. Run strings to gather any information
 
