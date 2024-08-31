@@ -7,10 +7,12 @@ layout: default
 
 Berikut merupakan senarai pemerintahan Sultan-Sultan Kelantan, yang telah memimpin negeri ini sejak abad ke-18. Setiap Sultan membawa kisah dan peranannya yang tersendiri dalam membentuk sejarah Kelantan. Namun, terdapat Sultan yang hilang dari senarai ini.
 
-Category: Web\n
-Challenge URL: [Challenge Link](https://f2add8dd3a.bahterasiber.my/)
+- Category: Web
+- Challenge URL: [Challenge Link](https://f2add8dd3a.bahterasiber.my/)
 
-1. View the page
+### Solution:
+
+##### 1. View the page
 
 <a href="step1.png">
     <img src="step1.png" alt="step1" style="width: 50%; height: 50%;">
@@ -19,7 +21,7 @@ Challenge URL: [Challenge Link](https://f2add8dd3a.bahterasiber.my/)
 
 
 
-2. View page source
+##### 2. View page source
 
 <a href="step2.png">
     <img src="step2.png" alt="step2" style="width: 50%; height: 50%;">
@@ -27,7 +29,7 @@ Challenge URL: [Challenge Link](https://f2add8dd3a.bahterasiber.my/)
 
 
 
-3. Compare with Wiki and find out the missing Sultan
+##### 3. Compare with Wiki and find out the missing Sultan
 
     Year: 1889
 
@@ -36,7 +38,7 @@ Challenge URL: [Challenge Link](https://f2add8dd3a.bahterasiber.my/)
 </a>
 
 
-4. Get the flag by quering the API manually
+##### 4. Get the flag by quering the API manually
 
 `https://f2add8dd3a.bahterasiber.my/api/v1/sultan/1889`
 
