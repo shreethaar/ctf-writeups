@@ -7,36 +7,38 @@ layout: default
 
 Setiap negeri mempunyai asal nama negeri tersebut. Begitu juga dengan negeri Sabah. Sabah juga mempunyai nama asal negeri tersebut yang popular di kalangan masyarakat tempatan.
 
-Category: Rev
-Challenge file: Asal\_Nama\_Sabah.exe
+- Category: Rev
+- Challenge file: Asal\_Nama\_Sabah.exe
 
-1. Use file command to analyze the binary
+### Solution:
+
+##### 1. Use file command to analyze the binary
 
 
 It seems the extension showing .exe suggests a Windows executable file, but the output of the file command indicates that it is actually a Linux ELF (Executable and Linkable Format) file. 
 
 
-2. Remove the .exe extension and give execution permission to the binary
+##### 2. Remove the .exe extension and give execution permission to the binary
 
 
-3. Run strings to gather any information
-
-
-
-4. Run the binary
+##### 3. Run strings to gather any information
 
 
 
-5. Use the disassembler 
+##### 4. Run the binary
+
+
+
+##### 5. Use the disassembler 
 
 
 
 
-6. Analyze the main function
+##### 6. Analyze the main function
 
 
 
-7. Analyze the check\_flag() function
+##### 7. Analyze the check\_flag() function
 ```c
  strcpy(s2, "5d505d591a20552e47293d325c3e3159291c");
   strcpy(s, "namaasalsabah");
@@ -47,12 +49,11 @@ It seems the extension showing .exe suggests a Windows executable file, but the 
     return printf("Correct! The flag is: %s\n", s2);
   else
     return puts("Wrong! Try again.");
-}
 ```
 From this code, we get to know that it encodes the string of s2 with XOR with the key of s ("namaasalsabah") and then compare with the input. 
 
-8. Extract both string and perform XOR with python script
-```python
+##### 8. Extract both string and perform XOR with python script
+```py
 s2 = "5d505d591a20552e47293d325c3e3159291c"
 s = "namaasalsabah"
 
