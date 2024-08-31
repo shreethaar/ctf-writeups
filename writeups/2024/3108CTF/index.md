@@ -7,7 +7,7 @@
 ## Challenge categories:
 
 <a href="Cyber_Kill_Chain.png">
-    <img src="Cyber_Kill_Chain.png" alt="Categories">
+    <img src="Cyber_Kill_Chain.png" alt="Categories" style="width: 50%; height: 50%;">
 </a>
 
 
