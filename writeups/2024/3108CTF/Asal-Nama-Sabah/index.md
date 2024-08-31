@@ -37,7 +37,7 @@ Enter the flag:
 
 ##### 5. Use the disassembler to view pseudocode and function used in the binary
 <a href="ida1.png">
-    <img src="ida1.png" alt="ida1">
+    <img src="ida1.png" alt="ida1" style="width: 50%; height: 50%;">
 </a>
 
 
