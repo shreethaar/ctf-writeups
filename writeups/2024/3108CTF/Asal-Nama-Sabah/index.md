@@ -36,14 +36,15 @@ Enter the flag:
 ```
 
 ##### 5. Use the disassembler to view pseudocode and function used in the binary
-
-
-
+<a href="ida1.png">
+    <img src="ida1.png" alt="ida1">
+</a>
 
 
 ##### 6. Analyze the main function
-
-
+<a href="ida2.png">
+    <img src="ida2.png" alt="ida1">
+</a>
 
 ##### 7. Analyze the check\_flag() function
 ```c
