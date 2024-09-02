@@ -24,7 +24,7 @@ Contoh: 1.23
 
 <img src="1.png" alt="Reverse Search" style="width: auto; height: 70%;">
 
-
+##### Step 2: Search GPS Coordinates from Wiki page
 
 <img src="2.png" alt="Wiki Page" style="width: auto; height: 90%;">
 
@@ -34,7 +34,7 @@ Contoh: 1.23
 
 
 
-##### Step 2: Search GPS Coordinates from Wiki page
+
 
 GPS Decimal in two decimal place: 3.15, 101.71
 
