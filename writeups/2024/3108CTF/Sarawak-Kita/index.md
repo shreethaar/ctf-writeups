@@ -18,7 +18,7 @@ Challenge File: Sarawak\_KITA.doc.bin
 ```sh
 $ binwalk Sarawak_KITA.doc.bin
 ```
-<img src="2.png" alt="binwalk-extract" style="width: 70%; height: 70%;">
+<img src="2.png" alt="binwalk-extract">
 
 ##### Step 3: Analyze the embedded content
 ```sh
@@ -32,7 +32,7 @@ $ tree _Sarawak_KITA.doc.bin.extracted
 $ xxd word/vbaProject.bin
 ```
 
-<img src=4.png" alt="xxd" style="width: 80%; height: 80%;">
+<img src="4.png" alt="xxd" style="width: 80%; height: 80%;">
 
 
 ##### Step 5: Decode base64 string from vbaProject.bin
