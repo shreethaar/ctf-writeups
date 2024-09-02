@@ -14,9 +14,9 @@ ZZZZZ ZZZzZ ZZZZZ ZZZZZ ZzZZz ZZZZ ZZZ ZZ ZZZZZ ZZzZZ ZZzZZ ZzZZ ZZZZZZ ZZzZZ
 
 ##### 1. Open the Challenge Page via the URL
 
-<img src=quest.png; alt="quest">
+<img src="quest.png" alt="quest">
 
-##### 2. Google It (this is coming from a guy who scored A in SPM Sejarah)
+##### 2. Google It
 
 [wiki page](https://ms.wikipedia.org/wiki/Sultan_Mahmud_Shah_II_dari_Johor#:~:text=Pada%20hari%20Jumaat%2C%20Ogos%201699,ditikam%20oleh%20Megat%20Seri%20Rama.)
 
