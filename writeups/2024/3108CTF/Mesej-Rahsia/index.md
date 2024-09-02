@@ -34,7 +34,8 @@ It seems the flag header and flag payload string is reversed
 
 ##### 4. Reconstruct Flag String
 `}txet_rehpic_etutitsbus{3108` ->  `3108{substitute_cipher_text}` 
-\There you go, flag for the challenge
+
+There you have the flag
 
 **Flag:** `3108{substitute_cipher_text}`
 
