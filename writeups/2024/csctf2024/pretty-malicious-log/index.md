@@ -30,6 +30,9 @@ Your answer: 13
 Correct!
 ```
 
+<img src="q2.png" alt="q2">
+
+With procmon, use the filter and set `Operation is RegSetValue` and `PPID is 1184` (1184 is the PID of adobe.exe). 
 
 ##### Q3: What is the MITRE ID of the persistence technique used by the malware?
 
@@ -38,13 +41,14 @@ Your answer: T1547.001
 Correct!
 ```
 
+It contain registry run keys which points to mOkkYMEs.exe also achieve persistence by adding a program to a startup folder or referencing it with a Registry run key.
+
 ##### Q4: What is the name of the file that is added to autoruns by the malware?
 
 ```
 Your answer: mOkkYMEs.exe
 Correct!
 ```
-
 
 ##### Q5: Which thread ID is responsible to create the environment for malware to run?
 
