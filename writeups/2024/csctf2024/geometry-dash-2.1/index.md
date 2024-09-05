@@ -16,7 +16,7 @@ Note: You do NOT need Geometry Dash purchased to solve this challenge.
 
 ##### Step 1: Decrypt dat file
 
-With this [script - gdcrypt.py](https://gist.githubusercontent.com/FaltoGH/b7563b425e10de41c56bf7af0dc4c864/raw/91275a4561cf658c63e3e02bb7cf5b5f7c1f3551/gdcrypt.py), able to decrypt the dat file
+With this [script](https://gist.githubusercontent.com/FaltoGH/b7563b425e10de41c56bf7af0dc4c864/raw/91275a4561cf658c63e3e02bb7cf5b5f7c1f3551/gdcrypt.py), able to decrypt the dat file
 
 ```py
 import base64, zlib, re
@@ -78,9 +78,13 @@ flag is in the level somewhere
 ```
 
 ```sh
-echo "echo "cA==zQ==cg==aA==YQ==cA==cw==dA==cg==eQ==OQ==NQ==NA==OA==NA==NG==Mw==NQ==" | base64 -d
-
+echo "cA==zQ==cg==aA==YQ==cA==cw==dA==cg==eQ==OQ==NQ==NA==OA==NA==NG==Mw==NQ==" | base64 -d
 p�rhapstry95484435% 
+```
+
+```sh
+cho "c3RvcCBwbGF5aW5nIHRoZSBnYW1lIQ==" | base64 -d
+stop playing the game!
 ```
 
 And also this:
@@ -90,7 +94,6 @@ And also this:
 ##### Step 4: Flag Found
 
 As the challenge suggest for the last step, using GDBrowser to get the flag. 
-
 With GDBrowser, and search for the player of [CSCTFa52de5](https://gdbrowser.com/comments/CSCTFa52de5), you will get this. 
 
 <img src="flag.png" alt="flag">
