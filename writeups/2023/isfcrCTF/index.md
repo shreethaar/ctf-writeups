@@ -1,7 +1,6 @@
 # isfcr{ctf} 2023
 
-<img src="logo.png" alt="logo>
-
+<img src="logo.png" alt="logo">
 
 Format: Jeopardy Jeopardy
 
