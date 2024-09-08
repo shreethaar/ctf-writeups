@@ -1,7 +1,9 @@
 ---
-title: stop-spamming
+title: stopspamming
 layout: default
 ---
+
+# Stop Spamming
 
 Description:
 
