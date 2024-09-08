@@ -30,6 +30,11 @@
           link: 11
         - name: challenge012
           link: 12
+    - name: petronasCTF
+      link: petronasCTF
+      items:
+        - name: stop-spamming
+        - link: stop-spamming
 
 - name: 2024
   link: /writeups/2024
