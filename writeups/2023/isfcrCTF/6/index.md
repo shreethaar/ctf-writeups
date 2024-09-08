@@ -6,6 +6,7 @@ layout: default
 # challenge006
 
 Description: 
+
 Apparently the flag I received this file from Elliot contains a flag. But the file seems to be corrupted, help me fix it and find the flag! Hints ● Have you tried opening the file in a hex editor? ● Read up on file signatures for image files. ● Inspect the 1st 4 bytes of the file - D8 FF E0 FF
 
 ### Solution:
