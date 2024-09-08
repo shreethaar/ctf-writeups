@@ -1,0 +1,11 @@
+--2023-11-23 18:47:57--  https://fetchzer.ctf.intigriti.io/download
+Resolving fetchzer.ctf.intigriti.io (fetchzer.ctf.intigriti.io)... 34.79.105.162
+Connecting to fetchzer.ctf.intigriti.io (fetchzer.ctf.intigriti.io)|34.79.105.162|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 45416767 (43M) [application/octet-stream]
+Saving to: ‘download’
+
+download                      30%[=============>                                ]  13.19M  --.-KB/s    eta 3h 11m download                      30%[=============>                                ]  13.19M  --.-KB/s    in 84m 3s  
+
+2023-11-23 20:12:02 (2.68 KB/s) - Read error at byte 13834624/45416767 (Connection timed out). Retrying.
+

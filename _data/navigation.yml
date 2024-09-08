@@ -45,7 +45,8 @@
     - name: 1337UPCTF
       link: 1337UPCTF
       items:
-        - 
+        - name: challenge001
+          link: challenge001
           
 - name: 2024
   link: /writeups/2024
