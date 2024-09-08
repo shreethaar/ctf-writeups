@@ -121,6 +121,14 @@
           link: geometry-dash-2.1
         - name: pretty-malicious-log
           link: pretty-malicious-log
+    - name: uoftctf
+      link: uoftctf
+      items:
+        - name: secret-message-1
+          link: secret-message-1
+        - name: osint
+          link: osint
+
 
 
 
