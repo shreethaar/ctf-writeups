@@ -28,6 +28,8 @@
           link: 10
         - name: challenge011
           link: 11
+        - name: challenge012
+          link: 12
 
 - name: 2024
   link: /writeups/2024
