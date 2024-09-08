@@ -1,0 +1,8 @@
+Open the pcap file.
+Open statistics and go to endpoints
+See which type of endpoint has the most ip address has most data conversations
+Under TCP, there are only two ip address, but is uneven. 
+Apply filter on the that is less
+Use TCP stream, and there found the honeypot handshake conversation
+
+https://digitalitskills.com/cyberdefenders-honeypot-wireshark-pcap-analysis/

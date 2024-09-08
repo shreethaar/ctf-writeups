@@ -1,0 +1,2 @@
+There seems to be some suspicious activity in the network. Can you identify the IP address of the rogue ICS component? (use network.pcapng). Hints Maybe the MAC addresses will give you a hint
+

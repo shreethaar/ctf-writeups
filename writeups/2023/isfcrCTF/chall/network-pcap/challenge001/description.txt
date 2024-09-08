@@ -1,0 +1,4 @@
+We found the network capture of a possible honeypot attack. Can you help us find out some more information about it?
+
+What is the victim's IP address?
+
