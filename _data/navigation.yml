@@ -35,11 +35,6 @@
       items:
         - name: stopspamming
         - link: stopspamming
-    - name: test
-      link: test
-      items:
-        - name: test1
-        - link: test1
 - name: 2024
   link: /writeups/2024
   items:
