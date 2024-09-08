@@ -1,0 +1,3 @@
+This MS Excel document has been file-level encrypted. I've had to change the file extension. Crack the password to find the flag.
+
+HINT: The password only contains alpha characters (A-Z, a-z). No numbers, no special characters, no spaces.

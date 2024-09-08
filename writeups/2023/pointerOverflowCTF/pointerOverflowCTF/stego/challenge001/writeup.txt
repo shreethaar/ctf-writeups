@@ -1,0 +1,2 @@
+1.Use binwalk -e and extract 
+2.Got the flag in txt file

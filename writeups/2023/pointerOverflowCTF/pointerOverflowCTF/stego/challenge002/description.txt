@@ -1,0 +1,6 @@
+I seem to have misplaced the flag for this challenge. I know that it's in one of these files. I just can't remember which one... And why would I have two copies of each image in different formats... I swear, I'd forget my head if I didn't have SQL constantly orbiting it.
+
+Archive password: poctf2023
+
+HINT: This challenge is giving a lot of people trouble. I've double checked everything, and I can unequivocally say it's all picsel perfect. 
+

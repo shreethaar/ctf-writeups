@@ -35,6 +35,17 @@
       items:
         - name: stopspamming
           link: stopspamming
+    - name: pointerOverflowCTF
+      link: pointerOverflowCTF
+      items:
+        - name: challenge001
+          link: challenge001
+        - name: challenge002
+          link: challenge002
+    - name: 1337UPCTF
+      link: 1337UPCTF
+      items:
+        - 
           
 - name: 2024
   link: /writeups/2024
