@@ -128,6 +128,11 @@
           link: secret-message-1
         - name: osint
           link: osint
+    - name: imaginaryctf
+      link: imaginaryctf
+      items:
+        - name: crash
+          link: crash
 
 
 
