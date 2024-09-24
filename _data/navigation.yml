@@ -141,8 +141,8 @@
           items:
             - name: password-protector
               link: password-protector
-            - name: revioli-revioli-give-me-the-formeoli
-              link: revioli-revioli-give-me-the-formeoli
+            - name: revioli
+              link: revioli
             - name: puzzle-room
               link: puzzle-room
         - name: forensic

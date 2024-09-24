@@ -1,5 +1,5 @@
 ---
-title: revioli-revioli-give-me-the-formeoli
+title: revioli
 layout: default
 ---
 
