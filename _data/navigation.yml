@@ -133,6 +133,10 @@
       items:
         - name: crash
           link: crash
+    - name: PatriotCTF2024
+      link: PatriotCTF2024
+      items:
+        - name: 
 
 
 
