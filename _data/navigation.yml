@@ -139,8 +139,21 @@
         - name: rev
           link: rev
           items:
-            - name: test
-              link: test
+            - name: password-protector
+              link: password-protector
+            - name: revioli-revioli-give-me-the-formeoli
+              link: revioli-revioli-give-me-the-formeoli
+        - name: forensic
+          link: forensic
+          items:
+        - name: misc
+          link: misc
+        - name: osint
+          link: osint
+        - name: pwn
+          link: pwn
+
+
 
 
 
