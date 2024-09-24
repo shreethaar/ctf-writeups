@@ -136,20 +136,13 @@
     - name: PatriotCTF
       link: PatriotCTF
       items:
-        - name: rev
-          link: rev
-          items:
-            - name: password-protector
-              link: password-protector
-        - name: forensic
-          link: forensic
-          items:
-        - name: misc
-          link: misc
-        - name: osint
-          link: osint
-        - name: pwn
-          link: pwn
+        - name: password-protector
+          link: password-protector
+        - name: revioli
+          link: revioli
+        - name: puzzle-room
+          link: puzzle-room
+       
 
 
 
