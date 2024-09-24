@@ -1,5 +1,5 @@
 ---
-title: Revioli, Revioli, give me the formeoli	
+title: revioli-revioli-give-me-the-formeoli
 layout: default
 ---
 
