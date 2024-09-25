@@ -144,7 +144,8 @@
           link: simple-exfiltration
         - name: bad-blood
           link: bad-blood
-
+        - name: packed-full-of-suprises
+          link: packed-full-of-suprises
 
 
 
