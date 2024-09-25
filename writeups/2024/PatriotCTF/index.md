@@ -22,7 +22,7 @@
 
 ### Reverse Engineering Challenges:
 
-| Challenges                             | Difficulty |                                                                                                                                           |
+| Challenges                             | Difficulty |
 |----------------------------------------|------------|
 | Password Protector                     | Easy       |
 | Revioli, Revioli, give me the formeoli | Easy       |
