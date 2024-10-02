@@ -150,6 +150,11 @@
           link: ai-prng
         - name: slingshot
           link: slingshot
+    - name: ibohctf2024
+      link: ibohctf2024
+      items:
+        - name: new-hire
+          link: new-hire
 
 
 
