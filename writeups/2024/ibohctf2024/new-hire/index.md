@@ -22,7 +22,7 @@ $ unzip kali.zip
 
 **Neglect the dump file** is not part of the challenge file, is from my output
 
-###### 2. View Groups.xml from loot directory
+##### 2. View Groups.xml from loot directory
 
 ```bash
 $ xmllint --format Groups.xml
@@ -54,4 +54,28 @@ L1ke_OscP_@gAiN}
 
 Here we got the second part of the flag, the first part should be in the json file from recon directory
 
+##### 4. Find the first part the flag
 
+Before start searching for the first part like a barbarian, we have to know the pattern of how the json file is categorized. We notice `computers`, `containers`,`domains`, `gpos`, `groups`, `ous`, `users`. Based on it, we can it is from BloodHound active directory whereby attacker collected credentials information with BloodHound and it generates JSON file.
+
+- Information of BloodHound JSON Object Formats: [bloodhound.readthedocs.io](https://bloodhound.readthedocs.io/en/latest/further-reading/json.html#object-formats)
+
+For the first part of the flag, it is locate at `20240815030319_users.json` file
+
+```bash
+jq . 20240815030319_users.json | grep description
+```
+
+We will notice a base64 encoded string
+`VwBlACAAZABpAGQAbgAnAHQAIABsAGUAYQByAG4AIABvAHUAcgAgAGwAZQBzAHMAbwBuACAAcwBvACAAdABoAGkAcwAgAGkAcwAgAG8AbgBlACAAaABhAGwAZgAgAG8AZgAgAHQAaABlACAAZgBsAGEAZwA6ACAASQBCAE8ASAAyADQAewBBAEQAXwBQAFcATgAzAGQAXwA=`
+
+##### 5. Decode the base64 string 
+
+```bash
+$ echo "VwBlACAAZABpAGQAbgAnAHQAIABsAGUAYQByAG4AIABvAHUAcgAgAGwAZQBzAHMAbwBuACAAcwBvACAAdABoAGkAcwAgAGkAcwAgAG8AbgBlACAAaABhAGwAZgAgAG8AZgAgAHQAaABlACAAZgBsAGEAZwA6ACAASQBCAE8ASAAyADQAewBBAEQAXwBQAFcATgAzAGQAXwA=" | base64 -d
+We didn't learn our lesson so this is one half of the flag: IBOH24{AD_PWN3d_
+```
+
+So we got the first part and second part of the flag
+
+**Flag:** `IBOH24{AD_PWN3d_L1ke_OscP_@gAiN}`
