@@ -18,4 +18,8 @@ After the intern left and was arrested for hacking his previous company, the com
 $ unzip kali.zip
 ```
 
+![new-hire-1](new-hire-1.jpg)
+
+**Neglect the dump file** is not part of the challenge file, is from my output
+
 
