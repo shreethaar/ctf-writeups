@@ -21,7 +21,7 @@ $ file filedanger
 filedanger: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), statically linked, no section header
 ```
 
-From the output, we able to notice that `no section header` which is stripped or packed, which unpacking the binary we do not have  information about the structure of the ELF file, such as code, data, and symbol sections. If they are missing, it could be an indication of a packed binary or one that has been deliberately stripped to make reverse engineering more difficult.
+From the output, we able to notice that `no section header` which is stripped or packed, which means unpacking the binary is needed since we do not have  information about the structure of the ELF file, such as code, data, and symbol sections. If they are missing, it could be an indication of a packed binary or one that has been deliberately stripped to make reverse engineering more difficult.
 
 To unpacked it, we can use upx 
 

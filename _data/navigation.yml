@@ -155,7 +155,13 @@
       items:
         - name: new-hire
           link: new-hire
-
+    - name: ascisctf
+      link: ascisctf
+      items:
+        - name: re
+          link: re
+        - name: tetris
+          link: tetris
 
 
 
