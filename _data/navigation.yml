@@ -162,6 +162,8 @@
           link: re
         - name: tetris
           link: tetris
+        - name: easy-forensic
+          link: easy-forensic
 
 
 
