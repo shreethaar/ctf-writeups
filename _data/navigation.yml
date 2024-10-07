@@ -164,8 +164,8 @@
           link: tetris
         - name: easy-forensic
           link: easy-forensic
-    - name: ironCTF
-      link: ironCTF
+    - name: ironctf
+      link: ironctf
       items:
         - name: uncrackable-zip
           link: uncrackable-zip
