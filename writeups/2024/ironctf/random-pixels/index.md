@@ -87,7 +87,7 @@ With this information, we can generate a script to reverse back the encryption p
 - Creating inverse mappings of these indices.
 - Rearranging the pixels back to their original positions using the inverse mappings.
 
-##### Script for reverse the encryption process
+##### 3. Script for reverse the encryption process
 
 ```py
 import random
@@ -141,3 +141,111 @@ decrypted_image.save(decrypted_image_path)
 
 print(f"Decrypted image saved as {decrypted_image_path}")
 ```
+
+After decryption, we able to view a QR code image:
+
+![decrypted](decrypted.png)
+
+##### 4. Use zbarimg to scan the QR code
+
+```bash
+$ zbarimg decrypted.png
+QR-Code:ironCTF{p53ud0_r4nd0m_f0r_4_r3450n}
+scanned 1 barcode symbols from 1 images in 0.01 seconds
+```
+
+**Flag:** `ironCTF{p53ud0_r4nd0m_f0r_4_r3450n}`
+
+### Alternative Decryption codes:
+
+##### Decryption code #1:
+```py
+# from @tommy_kay
+
+import random
+import numpy as np
+from PIL import Image
+
+
+def reverse_randomize(shuffled_img, seed):
+    random.seed(seed)
+    new_y = list(range(shuffled_img.shape[0]))
+    new_x = list(range(shuffled_img.shape[1]))
+    shuffled_y = new_y.copy()
+    shuffled_x = new_x.copy()
+    random.shuffle(shuffled_y)
+    random.shuffle(shuffled_x)
+    original = np.empty_like(shuffled_img)
+    for i, y in enumerate(shuffled_y):
+        for j, x in enumerate(shuffled_x):
+            original[y][x] = shuffled_img[i][j]
+    return np.array(original)
+
+
+shuffled_image_path = "encrypted.png"
+epoch_time = 1727902960  # Obtain from file properties and convert to unix time
+
+with Image.open(shuffled_image_path) as img:
+    shuffled_img = np.array(img)
+    original_img = reverse_randomize(shuffled_img, epoch_time)
+    original_image_path = "original_image.png"  # Path to save the original image
+    original_image = Image.fromarray(original_img)
+    original_image.save(original_image_path)
+```
+
+##### Decryption code #2:
+
+```py
+# @rockandroll
+import time
+
+# Input date and time string
+# date_string = "5 October 2024 19:00:35"
+date_string = "3 October 2024 00:32:40"
+
+# Convert the date string to a time struct
+time_struct = time.strptime(date_string, "%d %B %Y %H:%M:%S")
+
+# Convert the time struct to a timestamp
+timestamp = time.mktime(time_struct)
+
+
+import random
+import numpy
+from PIL import Image
+
+def recover_image(img, seed):
+    # Set the same seed used for randomization
+    random.seed(seed)
+
+    # Get the height and width of the image
+    height, width = img.shape[0], img.shape[1]
+
+    # Create the shuffled indices
+    new_y = list(range(height))
+    new_x = list(range(width))
+    random.shuffle(new_y)
+    random.shuffle(new_x)
+
+    # Reverse the shuffling
+    recovered = numpy.empty_like(img)
+    for i, y in enumerate(new_y):
+        for j, x in enumerate(new_x):
+            recovered[y][x] = img[i][j]
+
+    return numpy.array(recovered)
+
+if __name__ == "__main__":
+    with Image.open('encrypted.png') as f:
+        img = numpy.array(f)
+        recovered = recover_image(img, int(timestamp))
+        image = Image.fromarray(recovered)
+        image.save("recovered_flag.png")
+
+```
+
+Key points:
+- **Seed Usage:** Both scripts require the original seed used during encryption to accurately reconstruct the original image. The seed is derived from a timestamp, which must match the time when the image was encrypted.
+- **Timestamp Requirement:** The epoch_time variable in the first script is hard-coded, while the second script generates the timestamp from a formatted date string. This flexibility allows for testing different timestamps to find the correct seed.
+
+
