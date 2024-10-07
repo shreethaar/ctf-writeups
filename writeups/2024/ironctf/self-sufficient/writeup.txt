@@ -1,0 +1,50 @@
+sELF Sufficient
+
+gdb ./chall
+start
+vm 
+base address 0x0000555555554000
+b *0x5555555553BB
+b *0x5555555553F2
+b *0x555555555433
+b *0x555555555491
+b *0x5555555554F0
+b *0x555555555529
+b *0x55555555558E
+b *0x5555555555E6
+b *0x55555555561D
+b *0x555555555682
+
+r ./chall
+
+set $rsi=$rax; $rax   : 0x31 -> '1'
+c
+there is no need to check here
+c
+set $rdx=$rax; $rax   : 0x63 -> 'c'
+c
+set $rcx=$rax; $rax   : 0x33 -> '3
+c
+set $rsi=$rax; $rax   : 0x70 -> 'p'
+c
+there is no need to check here
+c
+set $rsi=$rax; $rax   : 0x49 -> 'I'
+c
+set $rsi=$rax; $rax   : 0x30 -> '0'
+c
+there is no need to check here
+c
+set $rsi=$rax; $rax   : 0x21 -> '!'
+
+-> 1Ac3pAI0A!
+
+./chall chall
+Test your findings here: 1Ac3pAI0A!
+You've unlocked the flag! :)
+
+-> 1nc3ptI0n!
+
+./chall chall
+Test your findings here: 1nc3ptI0n!
+You've unlocked the flag! :)

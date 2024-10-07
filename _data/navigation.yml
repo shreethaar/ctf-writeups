@@ -169,6 +169,8 @@
       items:
         - name: uncrackable-zip
           link: uncrackable-zip
+        - name: random-pixels
+          link: random-pixels
 
 
 

@@ -20,7 +20,7 @@ Archive:  chal.zip
   inflating: enc.py
   inflating: encrypted.png
 ```
-
+encrypted.png:
 ![encrypted](encrypted.png)
 
 enc.py:
@@ -50,7 +50,7 @@ if __name__ == "__main__":
 		image = Image.fromarray(out)
 		image.save("encrypted.png")
 ```
-The encryption code reads an image from a file specified by FLAG, then randomizes its pixel positions based on a seed derived from the current time (time.time()). It shuffles the pixel rows and columns independently, creating an encrypted image. To reverse this image, we can take the timestamp of the image which can be used as the seed for reversing the randomization.
+The encryption code reads an image from a file specified by FLAG, then randomizes its pixel positions based on a seed derived from the current time `(time.time())`. It shuffles the pixel rows and columns independently, creating an encrypted image. To reverse this image, we can take the timestamp of the image which can be used as the seed for reversing the randomization.
 
 ##### 2. Check the metadata of encrypted.png
 
