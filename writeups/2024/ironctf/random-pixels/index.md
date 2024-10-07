@@ -21,6 +21,7 @@ Archive:  chal.zip
   inflating: encrypted.png
 ```
 encrypted.png:
+
 ![encrypted](encrypted.png)
 
 enc.py:
