@@ -175,8 +175,11 @@
           link: capital-of-italy
         - name: game-of-hunt
           link: game-of-hunt
-
-
+    - name: crackmes-one
+      link: crackmes-one
+      items:
+        - name: ananascharles-authorize-by-PIN
+          link: ananascharles-authorize-by-PIN
 
 
 
