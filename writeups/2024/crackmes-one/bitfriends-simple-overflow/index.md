@@ -1,6 +1,6 @@
 ---
 title: "Simple Overflow"
-layout: default"
+layout: default
 ---
 
 # Simple Overflow
