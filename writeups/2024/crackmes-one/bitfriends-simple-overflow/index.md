@@ -60,4 +60,12 @@ Next, modify the register value of `eax` to 0 and then continue
 
 Now, we are login in as admin
 
-
+.gdb\_history:
+```bash
+b login
+run
+b *0x5555555551DF
+c
+set $eax=0
+c
+```
