@@ -187,6 +187,8 @@
       items:
         - name: ping-me
           link: ping-me
+        - name: base64by32
+          link: base64by32
 
 
 
