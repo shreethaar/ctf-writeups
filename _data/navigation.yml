@@ -182,8 +182,11 @@
           link: ananascharles-authorize-by-PIN
         - name: bitfriends-simple-overflow
           link: bitfriends-simple-overflow
-
-
+    - name: huntressctf
+      link: huntressctf
+      items:
+        - name: ping-me
+          link: ping-me
 
 
 
