@@ -28,3 +28,27 @@ analyze=chr(-8710+CLng(&H224A))&chr(CLng(&H1C3C)-7123)&chr(-1048+CLng(&H485))&ch
 
 WScript.Echo analyze
 ```
+
+##### 3. Execute modified vbs script
+
+![mal2](mal2.jpg)
+
+Apparently, the malicious vbs script is using cmd to ping multiple IP address. IP address seems a bit weird. 
+
+Assuming each octet is ASCII representation of a printable character
+
+##### 4. Convert the IP address to ASCII characters
+
+After extracting the IP address:
+
+```
+102 108 97 103 123 54 100 49 98 54 48 52 98 98 49 98 54 100 97 51 50 98 56 98 98 99 97 57 101 50 54 100 53 49 53 56 57 125 35 35
+```
+
+![mal3](mal3.jpg)
+
+And we found the flag:
+
+**Flag:** `flag{6d1b604bb1b6da32b8bbca9e26d51589}`
+
+
