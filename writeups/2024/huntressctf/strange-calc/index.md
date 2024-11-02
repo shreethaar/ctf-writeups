@@ -15,19 +15,20 @@ I got this new calculator app from my friend! But it's really weird, for some re
 ##### 1. Run the calc.exe
 - Will notice UAC prompt (Failed open the calculator)
 
-![[calc-1.png]]
+![calc-1.png]
 
 And notice a dropper of jse file with random string 
 
 ##### 2. Run calc.exe with procmon to monitor its process
 - Will notice multiple wscript.exe run with the PPID of calc.exe
-![[calc-2.png]]
+
+![calc-2.png]
 
 ##### 3. Analyze calc.exe with PEStudio and DetectITEasy
 
-![[calc-3.png]]
+![calc-3.png]
 
-![[calc-4.png]]
+![calc-4.png]
 
 Conclusion: Calc.exe is complied using AutoIT and being packed with UPX
 
