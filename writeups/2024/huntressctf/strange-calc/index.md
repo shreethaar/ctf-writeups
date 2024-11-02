@@ -119,7 +119,7 @@ function a(b){var c="",d=b.split("\n");for(var e=0;e<d.length;e++){var f=d[e].re
 
 #### 5. Deofuscate the js script:
 
-```
+```js
 function decode(b) {
     var c = "", d = b.split("\n");
     for (var e = 0; e < d.length; e++) {
@@ -150,7 +150,7 @@ console.log("Decoded content:", decoded);
 
 javascript code to decode m variable with UUencoding 
 
-```
+```js
 function decode(b) {
     console.log("Input string:", b);
     var c = "", d = b.split("\n");
@@ -200,7 +200,7 @@ console.log("Decoded content:", decoded);
 ```
 
 Output:
-```
+```bash
 Input string: begin 644 -
 G9FQA9WLY.3(R9F(R,6%A9C$W-3=E,V9D8C(X9#<X.3!A-60Y,WT*
 `
