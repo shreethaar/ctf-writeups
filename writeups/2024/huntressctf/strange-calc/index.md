@@ -235,3 +235,7 @@ Skipping line (begin/end/empty)
 Final string before truncation: flag{9922fb21aaf1757e3fdb28d7890a5d93}
 Decoded content:
 ```
+
+**Flag:** `flag{9922fb21aaf1757e3fdb28d7890a5d93}`
+
+
