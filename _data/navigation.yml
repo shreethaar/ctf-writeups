@@ -191,6 +191,16 @@
           link: ping-me
         - name: base64by32
           link: base64by32
+        - name: echo-chamber
+          link: echo-chamber
+        - name: no-need-for-brutus
+          link: no-need-for-brutus
+        - name: obfuscation-station
+          link: obfuscation-station
+        - name: strange-calc
+          link: strange-calc
+        - name: zimmer-down
+          link: zimmer-down
     - name: isitdtuctf
       link: isitdtuctf
       items:
