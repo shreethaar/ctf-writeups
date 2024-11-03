@@ -203,6 +203,8 @@
           link: zimmer-down
         - name: russian-roulette
           link: russian-roulette
+        - name: x-ray
+          link: x-ray
     - name: isitdtuctf
       link: isitdtuctf
       items:
