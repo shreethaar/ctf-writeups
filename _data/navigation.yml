@@ -201,6 +201,8 @@
           link: strange-calc
         - name: zimmer-down
           link: zimmer-down
+        - name: russian-roulette
+          link: russian-roulette
     - name: isitdtuctf
       link: isitdtuctf
       items:
