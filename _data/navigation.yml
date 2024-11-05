@@ -205,6 +205,12 @@
           link: russian-roulette
         - name: x-ray
           link: x-ray
+        - name: keyboard-junkie
+          link: keyboard-junkie
+        - name: gocrackme1
+          link: gocrackme1
+        - name: stack-it
+          link: stack-it
     - name: isitdtuctf
       link: isitdtuctf
       items:
