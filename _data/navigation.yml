@@ -211,6 +211,8 @@
           link: gocrackme1
         - name: stack-it
           link: stack-it
+        - name: mimi
+          link: mimi
     - name: isitdtuctf
       link: isitdtuctf
       items:
