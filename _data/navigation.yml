@@ -213,6 +213,8 @@
           link: stack-it
         - name: mimi
           link: mimi
+        - name: hidden-streams
+          link: hidden-streams
     - name: isitdtuctf
       link: isitdtuctf
       items:
