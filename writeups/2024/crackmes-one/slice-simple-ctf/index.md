@@ -123,4 +123,34 @@ c
 
 ![crackme2](crackme2.jpg)
 
+The full gdb process:
+```
+info functions
+b main
+r
+b *0x555555555337
+c
+ni
+ni
+x/16b *0x7fffffffe411
+x/s *0x7fffffffe411
+x/s 0x7fffffffe411
+x/16b 0x7fffffffe411
+set *((char*)0x7fffffffe41e) = 0
+set *((char*)0x7fffffffe41f) = 0
+x/16b 0x7fffffffe411
+set *((char*)0x7fffffffe41d) = 0
+x/16b 0x7fffffffe411
+set *((char*)0x7fffffffe41e) = 0
+x/16b 0x7fffffffe411
+context
+b *0x5555555554ae
+c
+info registers
+set $eax=1
+info registers
+ni
+c
+exit
+```
 
