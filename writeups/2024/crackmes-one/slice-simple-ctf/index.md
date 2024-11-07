@@ -73,7 +73,7 @@ At this part, `s1 (RDI): 0x7fffffffe411` is the address of the first string, `"C
 
 To remove it: `set *((char*)0x7fffffffe41d) = 0`
 
-###### 4. Going back the decompiler
+##### 4. Going back the decompiler
 
 Notice another function `compare_hashes`, making a comparison. If true, returns `Y4Y U D1D 17`, or else `7rY 4641N`
 
