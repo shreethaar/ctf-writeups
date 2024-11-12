@@ -225,6 +225,10 @@
       link: isitdtuctf
       items:
         - name:
-
-
-
+    - name: bluehensctf2024
+      link: bluehensctf2024
+      items:
+        - name: whispers-of-the-messenger
+          link: whispers-of-the-messenger
+        - name: intro-to-reverse
+          link: intro-to-reverse
