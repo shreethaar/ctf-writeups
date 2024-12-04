@@ -15,7 +15,7 @@ Find the function that initialize the DialogBox. From the Function Panel, we can
 
 2. Decompile the binary to view the pseudocode in C
 
-Press F5 to view the pseudocode, try the panel to the right side, and then right click to synchronize with assembly code. This step is to make it easier to refer C code to assembly back to back. 
+Press F5 to view the pseudocode, drag the panel to the right side, and then right click to synchronize with assembly code. This step is to make it easier to refer C code to assembly back to back. 
 
 ![ex01-2](ex01-2.jpg)
 
