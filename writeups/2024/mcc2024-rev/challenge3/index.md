@@ -6,7 +6,7 @@ layout: default
 
 ##### 1. Use CFF Explorer to remove .reloc data section
 
-![]()
+![ex03-1](ex03-1.jpg)
 
 **Knowing what is `.reloc` data:
 - It contains data which allows the PE file to be loaded at different address each time it is executed (.reloc = relocation)
