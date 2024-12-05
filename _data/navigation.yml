@@ -232,3 +232,13 @@
           link: whispers-of-the-messenger
         - name: intro-to-reverse
           link: intro-to-reverse
+    - name: mcc2024-rev
+      link: mcc2024-rev
+      items:
+        - name: challenge1
+          link: challenge1
+        - name: challenge2
+          link: challenge2
+        - name: challenge3
+          link: challenge3
+
