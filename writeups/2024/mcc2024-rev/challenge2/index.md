@@ -2,18 +2,15 @@
 title: ex02.exe
 layout: default
 ---
-
-# ex02.exe
-
 ### Solution:
 
-1. Use IDA to disassemble the binary
+##### 1. Use IDA to disassemble the binary
 
 Similar process as before, find the `DialogFunc` and analyze the disassembled assembly code or C pseudocode. 
 
 ![ex02-1](ex02-1.jpg)
 
-2. Getting in depth into assembly instruction
+##### 2. Getting in depth into assembly instruction
 
 ```asm
 .text:004013AE                 add     eax, 45370DF7h
@@ -33,7 +30,7 @@ Here the assembly code perform a series of operations:
 4. Xor `OxBA14C823`
 5. Finally it compares the value with `0x45BEB206`, if matches then print out correct
 
-3.Reverse the operation
+##### 3.Reverse the operation
 
 Here is the C implementation code to reverse the operation
 
