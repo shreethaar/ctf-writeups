@@ -12,7 +12,7 @@ Similar process as before, find the `DialogFunc` and analyze the disassembled as
 
 ##### 2. Getting in depth into assembly instruction
 
-```asm
+```nasm
 .text:004013AE                 add     eax, 45370DF7h
 .text:004013B3                 add     esp, 0Ch
 .text:004013B6                 xor     eax, 0AAFBBCBEh
