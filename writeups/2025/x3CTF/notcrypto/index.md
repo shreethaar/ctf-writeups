@@ -305,4 +305,4 @@ func main() {
 ```
 Here is decryption code in golang. 
 
-**Flag:** `Flag: x3c{pwndbg_and_pwntools_my_belowed_573498532832}`
+**Flag:** `x3c{pwndbg_and_pwntools_my_belowed_573498532832}`
