@@ -242,3 +242,12 @@
         - name: challenge3
           link: challenge3
 
+- name: 2025
+  link: /writeups/2025
+  items:
+    - name: x3CTF
+      link: x3CTF
+      items:
+        - name: notcrypto
+          link: notcrypto
+
