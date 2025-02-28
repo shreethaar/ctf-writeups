@@ -250,4 +250,8 @@
       items:
         - name: notcrypto
           link: notcrypto
-
+    - name: flare-on-1
+      link: flare-on-1
+      items:
+        - name: chall-1
+          link: chall-1
