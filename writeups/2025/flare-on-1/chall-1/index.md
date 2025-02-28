@@ -1,5 +1,5 @@
 ---
-title: Bob Doge
+title: Challenge 1
 layout: default
 ---
 

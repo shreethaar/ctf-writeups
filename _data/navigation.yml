@@ -255,3 +255,7 @@
       items:
         - name: chall-1
           link: chall-1
+        - name: chall-2
+          link: chall-2
+        - name: chall-3
+          link: chall-3
