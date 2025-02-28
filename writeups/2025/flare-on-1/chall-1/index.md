@@ -7,15 +7,16 @@ layout: default
 
 Executing the challenge binary will open a GUI application with Bob Ross image and with a `DECODE !` button. 
 
-![[Pasted image 20250228093056.png]]
+![flare-on-1-chall-1-001.png](flare-on-1-chall-1-001.png)
 
 After pressing the decode button, it showed this:
 
-![[Pasted image 20250228093230.png]]
+![flare-on-1-chall-1-002.png](flare-on-1-chall-1-002.png)
 
 ### Solution:
 ##### 1. Use Detect-It-Easy and CFF Explorer gather information
-![[Pasted image 20250228093540.png]]
+
+![flare-on-1-chall-1-003.png](flare-on-1-chall-1-003.png)
 
 From here, the executable is compiled with .NET assembly. Next, we can use dnSpy to decompiled the executable and look through the functions used. 
 
