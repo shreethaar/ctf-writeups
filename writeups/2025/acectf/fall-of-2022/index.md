@@ -15,7 +15,7 @@ What? You already knew this domain? Oh, I guess you’ll have no trouble finding
 Good Luck!
 
 - Category: OSINT
-
+- Challenge Link/Domain: [acectf.tech](https://acectf.tech)
 ### Solution:
 ##### 1. Acknowledge the hints from the challenge description
 Based on the challenge description, it stores a flag at `txt` along with the given domain `acectf.tech`. A **TXT (Text) record lookup** is a **DNS query** used to retrieve **TXT records** associated with a domain. TXT records store arbitrary text-based data, often used for security, authentication, and verification purposes. 
