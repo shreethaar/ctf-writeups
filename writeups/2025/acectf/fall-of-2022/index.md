@@ -14,7 +14,6 @@ What? You already knew this domain? Oh, I guess you’ll have no trouble finding
 
 Good Luck!
 
-
 - Category: OSINT
 
 ### Solution:
