@@ -259,3 +259,16 @@
           link: chall-2
         - name: chall-3
           link: chall-3
+    - name: acectf
+      link: acectf
+      items: 
+        - name: broken-secrets
+          link: broken-secrets
+        - name: fall-of-2022
+          link: fall-of-2022
+        - name: hidden-in-the-traffic
+          link: hidden-in-the-traffic
+        - name: the-mysterious-building
+          link: the-mysterious-building
+        - name: virtual-hard-disk
+          link: virtual-hard-disk
