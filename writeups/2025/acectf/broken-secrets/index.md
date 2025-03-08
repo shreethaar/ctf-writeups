@@ -97,7 +97,7 @@ After the discover, `media/not_so_suspicious_file` could indicate an embedded ma
 ##### 4. Analyze not_so_suspicious_file
 By analyzing the hex file header of the file, it indicates a PNG file with a corrupted header. 
 
-![[acectf-forensic1.png]]
+![acectf-forensic1.png](acectf-forensic1.png)
 
 Example of a correct PNG Header:
 ```
