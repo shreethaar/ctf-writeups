@@ -9,11 +9,14 @@ Challenge File: very_success.exe
 ### Solution:
 ##### 1. Analyze with Detect-It-Easy
 Here is the output from Detect-It-Easy, it is the same as first challenge
-![[ctf-writeups/writeups/2025/flare-on-2/chall-2/flareon2-3.png]]
+
+![ctf-writeups/writeups/2025/flare-on-2/chall-2/flareon2-3.png](ctf-writeups/writeups/2025/flare-on-2/chall-2/flareon2-3.png)
 
 ##### 2. Decompile it using IDA
 At the function list, there are only two user-defined function:
-![[flareon2-4.png]]
+
+![flareon2-4.png](flareon2-4.png)
+
 `sub_401000` is most likely the "main function" and then it will use `sub_401084` to process arguments passed in the previous function. 
 
 ##### 3. Analyzing the sub_401084 function
@@ -90,7 +93,7 @@ swap(cl, dl);
 ##### Use x32dbg to debug
 In order to find out the value of EDI, we need to check the memory dump after hitting the breakpoint at `mov edi, [ebp+arg_0]`. In order to have the code execute at that address, we have to make sure our input string contains 37 characters. Here is the test strings used: `ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!`
 
-![[flareon2-5.png]]
+![flareon2-5.png](flareon2-5.png)
 
 Here is the hex array bytes, we have to used this to craft our reverse script. In order to make the reverse script solution, here are the considerations:
 - Read EDI backwards
@@ -99,7 +102,8 @@ Here is the hex array bytes, we have to used this to craft our reverse script. I
 - AND 3 for lower 2 bits
 
 The reason why we use the XOR key is because at `xor al, [esp+10h+var_C]`in the debugger showed this:
-![[flareon2-6.png]]
+
+![flareon2-6.png](flareon2-6.png)
 
 With all information required, we can generate the script. Here is it:
 ```go 
