@@ -266,6 +266,13 @@
           link: chall-1
         - name: chall-2
           link: chall-2
+    - name: flare-on-3
+      link: flare-on-3
+      items: 
+        - name: chall-1
+          link: chall-1
+
+
     - name: acectf
       link: acectf
       items: 
