@@ -5,7 +5,7 @@ Using command prompt to run the challenge executable will prompt to enter passwo
 ![flare3-1.png](flare3-1.png)
 
 ### Solution:
-#### 1. Use IDA to disassemble to challenge executable 
+##### 1. Use IDA to disassemble to challenge executable 
 
 ![flare3-2.png](flare3-2.png)
 
