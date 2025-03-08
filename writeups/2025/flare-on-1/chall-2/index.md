@@ -11,6 +11,7 @@ $ python3 -m http.server
 ```
 
 ![flare-on-1-chall-2-001.png](flare-on-1-chall-2-001.png)
+
 We notice a Flare-On version of the website
 
 ### Solution:
@@ -27,6 +28,7 @@ It tries to include and execute `img/flare-on.png` as if were a PHP file. Since 
 ##### 2. Analyze hex bytes of flare-on.png
 
 ![flare-on-1-chall-2-002.png](flare-on-1-chall-2-002.png)
+
 After the IEND section, it continues with a PHP code. Lets parse of the remaining with bytes and strings it out. Here is the go code to parse it out to a php source file:
 
 ```go
