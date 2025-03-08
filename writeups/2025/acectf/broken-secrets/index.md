@@ -106,6 +106,6 @@ Example of a correct PNG Header:
 
 The first four of byte offset seems incorrect, that makes it unable to determine the file format via `file` command. A simple fixed replacement able to view the PNG image. Here is the image file: 
 
-![[acectf-forensic2.png]]
+![acectf-forensic2.png](acectf-forensic2.png)
 
 **Flag:** `ACECTF{h34d3r_15_k3y}`

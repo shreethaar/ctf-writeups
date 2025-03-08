@@ -15,12 +15,12 @@ The challenge description state that there is a hidden message contained in the 
 
 Upon checking the list of protocol used in the packet capture. ICMP stands out as it is common technique to be used for data exfiltration. 
 
-![[acectf-forensic3.png]]
+![acectf-forensic3.png](acectf-forensic3.png)
 
 ##### 2. Check IP addresses used ICMP 
 From the Conversation tab, we can notice only two IP addresses uses ICMP to communicate (`8.8.8.8` and `10.0.2.15`) 
 
-![[acectf-forensic4.png]]
+![acectf-forensic4.png](acectf-forensic4.png)
 
 Next we should filter and parse out the bytes transfer between these two IP addresses with ICMP protocol
 

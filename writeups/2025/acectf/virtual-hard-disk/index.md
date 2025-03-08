@@ -17,7 +17,7 @@ Be careful, a lot of fake galfs around.
 ##### 1. Use FTKImager to identify any suspicious file
 After a long time of exploring (clicking and clicking --\_\--), this weird file `666c61672e747874.jpg` contain two data streams `Flag` and `Key`. 
 
-![[acectf-forensic6.png]]
+![acectf-forensic6.png](acectf-forensic6.png)
 
 Taking a look what are the strings in it:
 ```
@@ -29,6 +29,6 @@ This is a Vigenere Cipher which uses key to perform rotation cipher. Chunk it in
 
 ##### 2. Decode Vigenere encoded string 
 
-![[acectf-forensic7.png]]
+![acectf-forensic7.png](acectf-forensic7.png)
 
 **Flag:** `ACECTF{7h3_d1ff3r3nc3_b37w33n_y0u_4nd_m3}`

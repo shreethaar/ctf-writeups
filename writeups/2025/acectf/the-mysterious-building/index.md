@@ -9,19 +9,20 @@ Wow, that's a cool tower—I remember it well; saw it when I was on the metro on
 - Category: OSINT
 - Challenge Image: OSINT-1.jpg
 
-![[OSINT-1.jpg]]
+![OSINT-1.jpg](OSINT-1.jpg)
 
 ### Solution:
 ##### 1. Use Google Images to find some clues about the tower
 
-![[osint-1.png]]
+![osint-1.png](osint-1.png)
 
 From Google, the tower is Pitampura TV Tower and located at New Delhi, India. References: 
 - [Flickr](https://www.flickr.com/photos/sachinkakkarphotography/7549037322)
 - [Reddit](https://www.reddit.com/r/delhi/comments/z5ew8b/pitampura/)
 
 ##### 2. Discover the nearby building near the tower 
-![[osint-2.png]]
+
+![osint-2.png](osint-2.png)
 
 There are numbers of buildings around the tower, also to note that from the challenge image, it seems that the buildings in around the range of 500m radius. With the use of LLM, it gives me a list of buildings:
 ```
@@ -35,7 +36,8 @@ There are numbers of buildings around the tower, also to note that from the chal
 ```
 
 From here, we can narrow it down. PP Tower is the one that is referred from the challenge image:
-![[osint-3.png]]
+
+![osint-3.png](osint-3.png)
 
 GPS Coordinates: `8.6939448,77.1481033`
 Name of Buidling: `PP Trade Centre`
