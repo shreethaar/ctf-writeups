@@ -4,16 +4,19 @@ layout: default
 ---
 # Challenge 1
 
-Challenge File: i_am_happy_you_are_to_playing_the_flareon_challenge.exe
+Challenge File: `i_am_happy_you_are_to_playing_the_flareon_challenge.exe`
 
 ### Solution:
 ##### 1. Run Detect-It-Easy to understand the binary
-![[flareon2-1.png]]The binary given is a 32-bit and used Assembly to code. Running it will prompts to enter a password 
-![[flareon2-2.png]]
+![flareon2-1.png](flareon2-1.png)
+The binary given is a 32-bit and used Assembly to code. Running it will prompts to enter a password 
+
+![flareon2-2.png](flareon2-2.png)
+
 
 ##### 2. Decompile it using IDA 
 Here is the assembly code for the binary
-```asm
+```nasm
 push    ebp
 mov     ebp, esp
 sub     esp, 10h
