@@ -17,6 +17,7 @@ Here is the entry point of `start` which calls `sub_401008`:
 ```
 
 Here is the graph showing the execution flow:
+
 ![flare-3-2.png](flare-3-2.png)
 
 At the end, it will show an output string of "Nope, that's not it" or "Congratulations! But wait, ....". So, there must be input taken into and perform validation in order to return either string as a result. 
@@ -209,6 +210,7 @@ if __name__ == "__main__":
 ```
 
 The result:
+
 ![flare-3-4.png](flare-3-4.png)
 
 Next attach with x32dbg, sent a breakpoint at where it will return congratulations message and find the flag. We need to modify the script so that we have enough time to attach it to the debugger.
