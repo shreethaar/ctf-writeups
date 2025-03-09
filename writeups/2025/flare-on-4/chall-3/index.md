@@ -18,6 +18,7 @@ Here is the entry point of `start` which calls `sub_401008`:
 
 Here is the graph showing the execution flow:
 ![flare-3-2.png](flare-3-2.png)
+
 At the end, it will show an output string of "Nope, that's not it" or "Congratulations! But wait, ....". So, there must be input taken into and perform validation in order to return either string as a result. 
 
 At `sub_401121`, it sets up a listening socket on `127.0.0.1` with port `2222 (0x8AE)`, accepts the connection and receive 4 byte of data. 
@@ -252,12 +253,15 @@ if __name__ == "__main__":
 ```
 
 Attaching with x32dbg:
+
 ![flare-3-5.png](flare-3-5.png)
 
 The breakpoint:
+
 ![flare-3-6.png](flare-3-6.png)
 
 Got the flag:
+
 ![flare-3-7.png](flare-3-7.png)
 
 **Flag:** `et_tu_brute_force@flare_on.com` 
