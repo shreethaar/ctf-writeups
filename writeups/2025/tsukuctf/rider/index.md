@@ -11,11 +11,15 @@
 ![rider](rider(1).png)
 
 1. Gather clue about the cartoon face brand signboard
+
 ![img0.png](img0.png)
+
 This image is a signboard banner for [OTI Fried Chicken](https://otifriedchicken.com/) outlet. However, there are many outlets scatters all over Indonesia. Next, we will use the lamp post which seems unique and different. It maybe could narrow down our findings.
 
 2. Reverse image search the lamp post
+
 ![img1.png](img1.png)
+
 Some result are repetitively stating it can be found in Yogyakarta. Now we can combine both clues and narrow down our searches.
 
 3. Narrow down our search
