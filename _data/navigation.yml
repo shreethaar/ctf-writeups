@@ -293,3 +293,10 @@
           link: the-mysterious-building
         - name: virtual-hard-disk
           link: virtual-hard-disk
+    - name: tsukuctf
+      link: tsukuctf
+      items:
+        - name: rider
+          link: rider
+        - name: schnee
+          link: schnee
