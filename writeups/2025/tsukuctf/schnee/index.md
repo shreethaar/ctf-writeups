@@ -8,18 +8,18 @@
 
 ### 1. Gather clues of possible hints of locations
 
-![img0.png](img0.png)
+![img0.png](ctf-writeups/writeups/2025/tsukuctf/schnee/img0.png)
 
 The banner showing SKISET, probably a ski rental shop in Grindelwald, Switzerland.
 
 ### 2. Narrow down possible locations
 With Google search, there will multiple outlets of SKISET. The closest with image is from an [Instagram post](https://www.instagram.com/p/DAoNti2TZWd/?img_index=7)
 
-![img1.png](img1.png)
+![img1.png](ctf-writeups/writeups/2025/tsukuctf/schnee/img1.png)
 
 Here is the Google Maps location: [https://maps.app.goo.gl/7ufBTH3UazmwmZh3A](https://maps.app.goo.gl/7ufBTH3UazmwmZh3A)
 
-![img2.png](img2.png)
+![img2.png](ctf-writeups/writeups/2025/tsukuctf/schnee/img2.png)
 
 **FLAG**: `TsukuCTF{46.624_8.039}`
 
