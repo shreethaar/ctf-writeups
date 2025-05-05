@@ -2,17 +2,17 @@
 
 ### 1. Run DiEC tools on infect.exe
 
-![img0.png](ctf-writeups/writeups/2025/hacktheon-sejong/I-Love-Reversing/img0.png)
+![img0.png](img0.png)
 
 From the output, the binary was compiled and packed with PyInstaller. In order to reverse engineer the binary, we have to utilize a tool the contents of a PyInstaller compiled executlable file. The tool used is [**pyinstxtractor**](https://github.com/extremecoders-re/pyinstxtractor) which is available in Github
 ### 2. Run pyinstxtractor with the binary
-![img1.png](ctf-writeups/writeups/2025/hacktheon-sejong/I-Love-Reversing/img1.png)
+![img1.png](img1.png)
 
 After running it, there will be extracted pyc file used in the executable and collected in a directory named infect.exe_extracted. Within the directory, we can find out the infect.pyc. Next, we have to decompile the pyc to python source code file in order to understand the behavior.
 
 ### 3. Decompile infect.pyc with PyLingual
 
-![[img2.png]]
+![img2.png](img2.png)
 
 With using infected.pyc, we chunk it into **PyLingual** (Online Python Decompiler) to view the source code. It will then look like this upon successfully decompiled.
 

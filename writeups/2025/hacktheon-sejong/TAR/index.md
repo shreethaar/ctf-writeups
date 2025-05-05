@@ -243,7 +243,7 @@ Running this script able to exploit the vulnerabilty to the /flag symlink
 
 ### 3. Send the payload to the challenge netcat session
 
-![img0.png](ctf-writeups/writeups/2025/hacktheon-sejong/TAR/img0.png)
+![img0.png](img0.png)
 
 **FLAG:** `FLAG{53f81c237b8466628a65ed9a0999aff8}`
 
