@@ -300,3 +300,12 @@
           link: rider
         - name: schnee
           link: schnee
+    - name: hacktheon-sejong
+      link: hacktheon-sejong
+      items:
+        - name: TAR
+          link: TAR
+        - name: I-Love-Reversing
+          link: I-Love-Reversing
+        - name: Barcode
+          link: Barcode
