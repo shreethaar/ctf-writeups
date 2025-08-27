@@ -309,14 +309,16 @@
           link: I-Love-Reversing
         - name: Barcode
           link: Barcode
-     - name: brunnerctf
-       link: brunnerctf 
-       items:
-         - name: there-is-a-lovely-land
-           link: there-is-a-lovely-land
-         - name: train-mania
-           link: train-mania
-         - name: traditional-cake
-           link: traditional-cake
-         - name: scandinavia-and-the-world
-           link: scandinavia-and-the-world
+    - name: brunnerctf 
+      link: brunnerctf 
+      items:
+        - name: there-is-a-lovely-land
+          link: there-is-a-lovely-land
+        - name: train-mania
+          link: train-mania
+        - name: traditional-cake
+          link: traditional-cake
+        - name: scandinavia-and-the-world
+          link: scandinavia-and-the-world
+      
+
