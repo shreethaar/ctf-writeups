@@ -25,5 +25,5 @@ Challenge Image:
 
 ![screenshot2](screenshot2.png)
 
-**Flag: `brunner{sallingsundbroen}`
+**Flag:** `brunner{sallingsundbroen}`
 
