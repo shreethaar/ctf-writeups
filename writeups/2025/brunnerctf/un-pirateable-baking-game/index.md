@@ -13,6 +13,7 @@ Something with Steam isn't working quite right yet either, so I've removed it fo
 - Use this [tool](https://github.com/UnderminersTeam/UndertaleModTool) and open data.win
 
 2. Patch function that check license 
+
 ```
 function isLicensed()
 {
@@ -92,6 +93,7 @@ blink = true;
 blink_speed = 15;
 alarm[0] = blink_speed;
 enabled_keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+
 ```
 
 3. Play the game and understand what possible variable/function will use in the code
