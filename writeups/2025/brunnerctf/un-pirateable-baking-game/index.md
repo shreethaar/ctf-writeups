@@ -130,5 +130,5 @@ if (global.isPirated)
 }
 ```
 
-**Flag:** brunner{n0_w4y!_th1s_sh0ld_h4v3_b33n_1mp0ss1bl3}
+**Flag:** `brunner{n0_w4y!_th1s_sh0ld_h4v3_b33n_1mp0ss1bl3}`
 
