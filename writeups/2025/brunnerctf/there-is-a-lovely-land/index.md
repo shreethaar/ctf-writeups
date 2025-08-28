@@ -14,4 +14,16 @@ Challenge Image:
 
 ![SomeBridge](SomeBridge.JPG) 
 
+### Solution:
+
+1. Reverse image search around the bridge 
+2. Results are showing similar images as Sallingsund bridge in Denmark 
+
+![screenshot1](screenshot1.png) 
+
+3. Refer to wikipedia about Sallingsund bridge 
+
+![screenshot2](screenshot2.png)
+
+**Flag: `brunner{sallingsundbroen}`
 
