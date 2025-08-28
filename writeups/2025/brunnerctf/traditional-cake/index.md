@@ -14,3 +14,15 @@ So, if the location found has code `apricot.surfer.uses`, the flag would be `bru
 Challenge Image:
 
 ![traditional-cake](traditional-cake.jpg)
+
+### Solution:
+
+1. Reverse image search will shows result of [Nymphenburg Palance](https://www.schloss-nymphenburg.de/englisch/palace/) in Munich, Germany
+
+Also this [image](https://www.flickr.com/photos/28432918@N04/4778028878/) from Flickr shows very identical position of where the image is taken 
+
+2. Use (what3words)[https://what3words.com/] find around the area where image is taken, on the road
+
+**Flag:** `brunner{rice.underway.pump}`
+
+
