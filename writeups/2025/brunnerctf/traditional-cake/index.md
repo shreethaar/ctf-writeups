@@ -19,9 +19,9 @@ Challenge Image:
 
 1. Reverse image search will shows result of [Nymphenburg Palance](https://www.schloss-nymphenburg.de/englisch/palace/) in Munich, Germany
 
-Also this [image](https://www.flickr.com/photos/28432918@N04/4778028878/) from Flickr shows very identical position of where the image is taken 
+2. Also this [image](https://www.flickr.com/photos/28432918@N04/4778028878/) from Flickr shows very identical position of where the image is taken 
 
-2. Use (what3words)[https://what3words.com/] find around the area where image is taken, on the road
+3. Use (what3words)[https://what3words.com/] find around the area where image is taken, on the road
 
 **Flag:** `brunner{rice.underway.pump}`
 
