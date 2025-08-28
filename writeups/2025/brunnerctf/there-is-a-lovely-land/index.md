@@ -21,7 +21,7 @@ Challenge Image:
 
 ![screenshot1](screenshot1.png) 
 
-3. Refer to wikipedia about Sallingsund bridge 
+3. Refer to [wikipedia](https://en.wikipedia.org/wiki/Sallingsund_Bridge) about Sallingsund bridge 
 
 ![screenshot2](screenshot2.png)
 
