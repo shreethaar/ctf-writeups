@@ -456,4 +456,32 @@ At the address 00408c60, there is main function of `Bakeware::main`.
 - if hash matches, calls `get_key_part()` function 8 times 
 - uses assembled key for AES-256 encryption 
 
+3. Bypass Hash Check
+- Set breakpoint at hash comparison (0x408d84)
+- Use debugger to force the conditional jump to succeed: 
+`*0x408d84 set $eflags |= 0x40`
 
+4. Key extraction analysis 
+- After bypass, program calls `get_key_part()` function 8 times 
+- Each call extracts bytes from two hardcoded strings containing various text 
+- Function uses `from_iter` to process the strings and extract specific characters
+
+5. Find the IV 
+- Analyzed hardcoded strings in `get_key_part` function
+- Found hex string: `12345678901234560123456789abcdef` 
+                IV: `12345678901234560123456789abcdef` 
+                Key: `OTHellOTotallyStealGoodRecipes!!`
+
+
+6. Decrypt the flag 
+- Using AES-256 CBC 
+
+```bash
+$ openssl enc -aes-256-cbc -d \
+  -in Grandmas_Secret_Baking_Family_Recipe.enc \
+  -K $(echo -n "OTHellOTotallyStealGoodRecipes!!" | xxd -p | tr -d '\n') \
+  -iv 12345678901234560123456789abcdef \
+  -out Grandmas_Secret_Baking_Family_Recipe.dec
+```
+
+**Flag:** `brunner{Gr4ndm4_sh0u1d_R34lL7_l34rn_b3tt3r_0ps3c}`
