@@ -108,6 +108,7 @@ So here is the encryption process:
 - Base85 encode and return
 
 2. Generate reverse script:
+
 To decrypt, we reverse each step: 
 - Base85 decode the input 
 - Reverse the byte array 
