@@ -43,8 +43,7 @@ Here is the disassembly from 0x400011:
 
 00400011  9c                 pushfq   {var_8_1}
 00400012  50                 push    rax {var_10_1}
-00400013  48b8d828d4d9d5de…  mov     rax, 0xaac4ded5d9d428d8
-0040001d  483105dcffffff     xor     qword [rel main_exec], rax  {0x3a544e454944b848}
+00400013  48b8d828d4d9d5de…  mov     rax, 0xaac4ded5d9d428d80040001d  483105dcffffff     xor     qword [rel main_exec], rax  {0x3a544e454944b848}
 00400024  48b8b09000002d00…  mov     rax, 0x2d000090b0
 0040002e  483105d3ffffff     xor     qword [rel data_400008], rax  {0x2ce9900020}
 00400035  58                 pop     rax {var_10_1}
