@@ -5,11 +5,14 @@
 
 ![rensumwei1.png](rensumwei1.png)
 
-- main function: `0000000140007c90`
+### 1. Analyze main function 
+main function: `0000000140007c90`
 ![rensumwei2.png](rensumwei2.png)
+
 At address `0000000140007ccd`, it called a functions that takes in argument of `flag.txt`, `flag_encrypted.remsumwei` and `fareedwuzhere`
 
-- Called function decompiled code:
+### 2. Analyze subfunction at address 0000000140007ccd
+Called function decompiled code:
   ```c
   void __fastcall sub_140007A50(const char *a1, const char *a2, const char *a3)
 {
@@ -69,8 +72,9 @@ At address `0000000140007ccd`, it called a functions that takes in argument of `
 }
   ```
 
-- Called function at `0000000140007b1e` which takes in arguments of the string `fareedwuzhere`, strlen of `fareedwuzhere` and `malloc(0x100)`. Here is the decompiled C code:
-  ```c
+Called function at `0000000140007b1e` which takes in arguments of the string `fareedwuzhere`, strlen of `fareedwuzhere` and `malloc(0x100)`. Here is the decompiled C code:
+
+```c
   _BYTE *__fastcall sub_140007C00(__int64 a1, int a2, __int64 a3)
 {
   __int64 i; // rax
