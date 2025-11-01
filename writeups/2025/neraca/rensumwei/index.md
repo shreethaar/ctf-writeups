@@ -1,17 +1,18 @@
-# rensumwei 
+### rensumwei 
 
 - Base address: `0000000140000000`
 - Entry point: `00000001400014f0`
 
 ![rensumwei1.png](rensumwei1.png)
 
-### 1. Analyze main function 
+##### 1. Analyze main function 
 main function: `0000000140007c90`
+
 ![rensumwei2.png](rensumwei2.png)
 
 At address `0000000140007ccd`, it called a functions that takes in argument of `flag.txt`, `flag_encrypted.remsumwei` and `fareedwuzhere`
 
-### 2. Analyze subfunction at address 0000000140007ccd
+##### 2. Analyze subfunction at address 0000000140007ccd
 Called function decompiled code:
   ```c
   void __fastcall sub_140007A50(const char *a1, const char *a2, const char *a3)
