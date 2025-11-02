@@ -31,4 +31,4 @@ Decode the hex string with give us the flag:
 
 **Flag:** `RWSC{n0_w4Y_y0u_d3cryp7_7h15}`
 
-
+Reference: [https://cocomelonc.github.io/tutorial/2022/06/27/malware-injection-20.html](https://cocomelonc.github.io/tutorial/2022/06/27/malware-injection-20.html)
