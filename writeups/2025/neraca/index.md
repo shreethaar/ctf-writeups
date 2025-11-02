@@ -3,6 +3,6 @@
 ![neraca](neraca.jpeg) 
 
 Challenge solved:
-- rensumwei
-- PEB walkz
-- rc6
+- [rensumwei](https://shreethaar.github.io/ctf-writeups/writeups/2025/neraca/rensumwei/)
+- [PEB walkz](https://shreethaar.github.io/ctf-writeups/writeups/2025/neraca/peb-walkz/)
+- [rc6](https://shreethaar.github.io/ctf-writeups/writeups/2025/neraca/rc6/)
