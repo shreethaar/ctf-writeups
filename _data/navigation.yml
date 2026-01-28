@@ -348,3 +348,14 @@
           link: hi 
         - name: packed-with-flag 
           link: packed-with-flag
+- name: 2026
+  link: /writeups/2026 
+  items: 
+    - name: uoftctf 
+      link: uoftctf
+      items:
+        - name: symbol-of-hope
+          link: symbol-of-hope 
+        - name: baby-exfil
+          link: baby-exfil 
+
