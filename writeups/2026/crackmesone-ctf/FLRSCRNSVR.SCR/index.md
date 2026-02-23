@@ -228,7 +228,7 @@ This is the expected output of sub_140001300(correct_password). Inverting the tr
 
 Here is the solve script:
 
-```
+```python
 #!/usr/bin/env python3
 """
 Crackme Solve Script
