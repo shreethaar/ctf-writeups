@@ -358,4 +358,11 @@
           link: symbol-of-hope 
         - name: baby-exfil
           link: baby-exfil 
+    - name: crackmesone-ctf
+      link: crackmesone-ctf
+      items:
+        - name: cryptpad
+          link: cryptpad
+        - name: FLRSCRNSVR.SCR
+          link: FLRSCRNSVR.SCR
 
