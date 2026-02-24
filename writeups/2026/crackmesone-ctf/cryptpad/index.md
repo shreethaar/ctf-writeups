@@ -1,6 +1,6 @@
 # CryptPad
 
-### 1. Renamed `sub_4013A2` to `unpaid_version_decrypt_func` and `sub_401718` to `enc_function`, reanalyze WNDPROC callback function
+1. Renamed `sub_4013A2` to `unpaid_version_decrypt_func` and `sub_401718` to `enc_function`, reanalyze WNDPROC callback function
 
 ```c
 int __stdcall sub_4011A0(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
@@ -44,7 +44,7 @@ int __stdcall sub_4011A0(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 
 Switch case table indicating if the `wParam` is `g`, it will proceed to the `file_input_handle_function` and store the result.  
 
-### 2. `struct_4024D` is `OPENFILENAMEA` struct
+1. `struct_4024D` is `OPENFILENAMEA` struct
 
 ```c
   stru_40242D.lStructSize = 76;
@@ -58,7 +58,7 @@ Switch case table indicating if the `wParam` is `g`, it will proceed to the `fil
 
 From `file_input_handle_function`, it uses `OPENFILENAME` struct and pass it as a pointer `GetSaveFileName` function
 
-### 3. At address `0x004013BD` contain function that encrypts the file
+1. At address `0x004013BD` contain function that encrypts the file
 
 ```c
  ProcessHeap = GetProcessHeap();
@@ -82,7 +82,7 @@ From `file_input_handle_function`, it uses `OPENFILENAME` struct and pass it as 
 From function `sub_40166B`, it uses a blob byte at address `0x004024C5` which is `.data:004024C5 byte_4024C5     db 0DEh, 0BCh, 0Ah, 89h, 67h, 45h, 23h, 1`
 and used in function `sub_4014EB`
 
-### 4. Understand the encryption algorithm of `sub_4014EB`
+1. Understand the encryption algorithm of `sub_4014EB`
 
 ```c
 char __stdcall sub_4014EB(_BYTE *a1, int a2, int a3)
@@ -187,4 +187,149 @@ LABEL_6:
     v33 = v23;
     v24 = (unsigned __int8)(v21 + 1);
     v32 = v20;
+    v25 = byte_403795[v24];
+    LOBYTE(v22) = v25 + v22;
+    v26 = byte_403795[v22];
+    byte_403795[v24] = v26;
+    byte_403795[v22] = v25;
+    LOBYTE(v24) = byte_403795[(unsigned __int8)(v25 + v26)] ^ a1[v21];
+    v20 = v32;
+    v32[v21++] = v24;
+    v23 = v33 - 1;
+  }
+  while ( v33 != 1 );
+  v27 = a1;
+  v28 = byte_4024C5;
+  v29 = NumberOfBytesWritten;
+LABEL_20:
+  v30 = 0;
+  do
+  {
+    result = *v28 ^ *v27;
+    *v27++ = result;
+    ++v28;
+    if ( ++v30 == 8 )
+      goto LABEL_20;
+    --v29;
+  }
+  while ( v29 );
+  if ( a3 == 1 )
+  {
+    v31 = &a1[a2 - 13 + RandomBufferLength];
+    *(_DWORD *)v31 = a2;
+    v31 += 4;
+    qmemcpy(v31, byte_4024C5, 8u);
+    v31[8] = 8;
+    return RandomBufferLength + a2;
+  }
+  return result;
+}
+```
 
+Based on ChatGPT output, it states the encryption algorithm is a RC4 stream cipher with some obfuscation.
+
+The encryption steps are:
+
+- XOR data with an 8-byte key which is `byte_4024C5`
+- Run RC4-like stream cipher using that key
+- XOR again with the same key
+- Append metadata (key+length info) at the end
+
+1. Decryption script to obtain flag
+
+```python
+import struct
+
+def xor_with_key(data: bytes, key: bytes) -> bytes:
+    """Repeating XOR with 8-byte key"""
+    out = bytearray(len(data))
+    for i in range(len(data)):
+        out[i] = data[i] ^ key[i % len(key)]
+    return bytes(out)
+
+def rc4_crypt(data: bytes, key: bytes) -> bytes:
+    """Standard RC4 (KSA + PRGA)"""
+    S = list(range(256))
+    j = 0
+
+    # Key Scheduling Algorithm (KSA)
+    for i in range(256):
+        j = (j + S[i] + key[i % len(key)]) % 256
+        S[i], S[j] = S[j], S[i]
+
+    # Pseudo-Random Generation Algorithm (PRGA)
+    i = 0
+    j = 0
+    out = bytearray()
+
+    for byte in data:
+        i = (i + 1) % 256
+        j = (j + S[i]) % 256
+        S[i], S[j] = S[j], S[i]
+
+        K = S[(S[i] + S[j]) % 256]
+        out.append(byte ^ K)
+
+    return bytes(out)
+
+def decrypt_file(filename: str, output: str):
+    with open(filename, "rb") as f:
+        enc = f.read()
+
+    if len(enc) < 13:
+        raise ValueError("File too small to contain footer")
+
+    # Footer layout:
+    # last byte = key length marker (should be 8)
+    key_len_marker = enc[-1]
+    if key_len_marker != 8:
+        raise ValueError("Invalid footer marker, expected 8")
+
+    # Extract key (8 bytes)
+    key = enc[-9:-1]
+
+    # Extract original length (4 bytes little-endian)
+    orig_len = struct.unpack("<I", enc[-13:-9])[0]
+
+    # Ciphertext body (everything before footer)
+    ciphertext = enc[:-13]
+
+    print("[+] Extracted key:", key.hex())
+    print("[+] Original length:", orig_len)
+
+    # Step 1: XOR with key
+    step1 = xor_with_key(ciphertext, key)
+
+    # Step 2: RC4 decrypt
+    step2 = rc4_crypt(step1, key)
+
+    # Step 3: XOR again
+    plaintext_padded = xor_with_key(step2, key)
+
+    # Step 4: Truncate to original length
+    plaintext = plaintext_padded[:orig_len]
+
+    with open(output, "wb") as f:
+        f.write(plaintext)
+
+    print("[+] Decryption complete!")
+    print("[+] Output written to:", output)
+
+if __name__ == "__main__":
+    decrypt_file("flag.enc", "flag.dec")
+
+```
+
+Here is the output:
+
+```bash
+[trevorphilips@allSafe CryptPad]$ python3 solve.py    
+[+] Extracted key: e8171bf4503f3d70  
+[+] Original length: 28  
+[+] Decryption complete!  
+[+] Output written to: flag.dec  
+[trevorphilips@allSafe CryptPad]$ cat flag.dec    
+CMO{r0ll_y0ur_0wn_b4d_c0d3}
+```
+
+FLAG:`CMO{r0ll_y0ur_0wn_b4d_c0d3}`
