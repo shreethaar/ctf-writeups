@@ -51,7 +51,11 @@ don't rely on memory of the format. The shape is:
 - Difficulty: <if known>
 - Author: <challenge setter, if known>
 
-<1-3 sentence flavor blurb from the challenge prompt, if it has one>
+<1-3 sentence flavor blurb from the challenge prompt, if it has one. If
+the challenge's *shape* is itself unusual for its category — e.g. a
+"rev" challenge with no binary at all, or a "pwn" challenge that's pure
+logic — add a sentence saying so and what the real puzzle turns out to
+be. That context is worth more to future-you than flavor text alone.>
 
 ### Solution:
 
@@ -66,6 +70,14 @@ language tag where sensible>
 ...
 
 **Flag:** `<the flag>`
+
+### Takeaways
+
+<optional — only include when the source notes have genuinely reusable
+insight beyond this one challenge (a recognizable pattern, a gotcha
+worth remembering next time, a technique that generalizes). Skip it for
+routine challenges; don't manufacture takeaways just to fill the
+section.>
 ```
 
 Each step is its own `##### N. <title>` (h5) heading — not a markdown
