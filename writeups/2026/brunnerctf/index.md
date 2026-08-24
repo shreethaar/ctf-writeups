@@ -6,3 +6,4 @@ I managed to solve:
 - [Brunner Stocks](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/brunner-stocks/) (pwn)
 - [Go Go Decompile](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/go-go-decompile/) (rev)
 - [Locked Out](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/locked-out/) (pwn)
+- [KPWhy](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/kpwhy/) (rev)
