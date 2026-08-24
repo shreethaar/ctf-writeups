@@ -365,4 +365,9 @@
           link: cryptpad
         - name: FLRSCRNSVR.SCR
           link: FLRSCRNSVR.SCR
+    - name: brunnerctf
+      link: brunnerctf
+      items:
+        - name: hrbot
+          link: hrbot
 
