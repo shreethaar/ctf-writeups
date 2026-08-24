@@ -108,6 +108,10 @@ Rules for the rewrite:
   doesn't exist yet (new CTF), create a minimal one matching the pattern
   of other `<ctf>/index.md` files (title, dates if known, brief list of
   solved challenges) — check 1-2 existing ones for the exact shape first.
+  Each solved-challenge list item must be a hyperlink to the writeup's
+  live page, not bare text — e.g.
+  `- [HRBot](https://shreethaar.github.io/ctf-writeups/writeups/<year>/<ctf-slug>/<challenge-slug>/) (pwn)`,
+  matching the convention in `writeups/2025/neraca/index.md`.
 
 ## Step 5 — Commit
 
