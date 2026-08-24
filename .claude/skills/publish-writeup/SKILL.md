@@ -96,6 +96,22 @@ Rules for the rewrite:
 - Prefer fewer, denser steps unless the challenge genuinely needs deep
   root-cause/mitigation analysis — check whether other writeups for the
   same CTF lean short or long, and match them.
+- **This site builds with Jekyll/Liquid, which parses the raw file
+  *before* Markdown/code-fence rendering — a literal `{%` or `{{` inside
+  a fenced code block (a `printf` format string like `"flag{%s_%d}"`,
+  a Jinja/Liquid snippet, etc.) is NOT protected by the triple-backtick
+  fence and will throw a fatal `Liquid::SyntaxError` that breaks the
+  *entire* GitHub Pages build for every page on the site, not just this
+  one.** Grep the finished file for `{%` and `{{` before committing; if
+  either appears inside a code block, wrap that block (or just the
+  offending line) in `{% raw %}` / `{% endraw %}`:
+  ```
+  {% raw %}
+  ```c
+  printf("flag{%s_%d}\n", a, b);
+  ```
+  {% endraw %}
+  ```
 - End with the flag on its own bolded line. That is always the last
   line of the file.
 

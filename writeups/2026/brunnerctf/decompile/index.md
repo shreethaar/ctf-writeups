@@ -82,11 +82,13 @@ The input is transformed before the compare, so work backwards: `0x5dc` = `1500`
 
 All five validated values get concatenated directly into the final `printf`:
 
+{% raw %}
 ```c
 printf("  brunner{%s_%ld_0x%lx_%c_%ld}\n",
        &badge_password, badge_staplers, badge_asset_tag,
        (uint64_t)(int32_t)badge_mug_letter, badge_budget);
 ```
+{% endraw %}
 
 Substituting in the five recovered values:
 
