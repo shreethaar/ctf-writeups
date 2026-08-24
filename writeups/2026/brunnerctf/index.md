@@ -9,3 +9,4 @@ I managed to solve:
 - [KPWhy](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/kpwhy/) (rev)
 - [Roadmap](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/roadmap/) (rev)
 - [Decompile?](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/decompile/) (rev)
+- [Reorg](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/reorg/) (rev)

@@ -382,4 +382,6 @@
           link: roadmap
         - name: decompile
           link: decompile
+        - name: reorg
+          link: reorg
 
