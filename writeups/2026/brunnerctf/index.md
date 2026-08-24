@@ -10,3 +10,4 @@ I managed to solve:
 - [Roadmap](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/roadmap/) (rev)
 - [Decompile?](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/decompile/) (rev)
 - [Reorg](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/reorg/) (rev)
+- [Pure Notes](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/pure-notes/) (pwn)

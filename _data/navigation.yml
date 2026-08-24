@@ -384,4 +384,6 @@
           link: decompile
         - name: reorg
           link: reorg
+        - name: pure-notes
+          link: pure-notes
 
