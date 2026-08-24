@@ -386,4 +386,8 @@
           link: reorg
         - name: pure-notes
           link: pure-notes
+        - name: guessing-game
+          link: guessing-game
+        - name: aptitude-test
+          link: aptitude-test
 

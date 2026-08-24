@@ -114,6 +114,19 @@ Rules for the rewrite:
   ```
 - End with the flag on its own bolded line. That is always the last
   line of the file.
+- **If the source notes never actually land on a flag** (a post-mortem
+  written up after the CTF ended, notes assembled from what other
+  people shared in Discord, an exploit chain that was never fully run
+  to completion) — don't fabricate one and don't force the flag line.
+  Add a `- Status: Not solved live — <what happened>` bullet to the
+  metadata block instead, credit whoever's solution is being described,
+  and end the last step with the confirmed solution/reasoning rather
+  than a `**Flag:**` line. Ask the user to confirm this framing (and
+  whether a real flag exists to close it out properly) before writing —
+  it's a real content decision, not a formatting default. On the CTF's
+  `index.md`, list these separately from the "I managed to solve"
+  list — e.g. under a "not solved live, written up from analysis /
+  community solutions" heading — rather than implying a live solve.
 
 ## Step 3 — Place files
 
