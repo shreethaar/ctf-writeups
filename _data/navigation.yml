@@ -372,4 +372,6 @@
           link: hrbot
         - name: brunner-stocks
           link: brunner-stocks
+        - name: go-go-decompile
+          link: go-go-decompile
 
