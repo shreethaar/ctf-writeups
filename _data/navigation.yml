@@ -370,4 +370,6 @@
       items:
         - name: hrbot
           link: hrbot
+        - name: brunner-stocks
+          link: brunner-stocks
 
