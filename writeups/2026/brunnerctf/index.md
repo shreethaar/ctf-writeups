@@ -8,3 +8,4 @@ I managed to solve:
 - [Locked Out](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/locked-out/) (pwn)
 - [KPWhy](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/kpwhy/) (rev)
 - [Roadmap](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/roadmap/) (rev)
+- [Decompile?](https://shreethaar.github.io/ctf-writeups/writeups/2026/brunnerctf/decompile/) (rev)

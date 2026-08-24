@@ -380,4 +380,6 @@
           link: kpwhy
         - name: roadmap
           link: roadmap
+        - name: decompile
+          link: decompile
 
