@@ -6,7 +6,7 @@ HRBot logs your "case notes" before firing you — the case-notes buffer turns o
 
 ### Solution:
 
-1. Check protections and symbols:
+##### 1. Check protections and symbols
 
 ```
 $ checksec --file=./hrbot
@@ -24,7 +24,7 @@ $ nm ./hrbot | grep ' T \| t '
 
 No canary + no PIE + an unstripped `win_func` symbol that's never called from normal program flow — classic ret2win, and no leak needed since addresses are fixed.
 
-2. Disassemble `handle_case` (`0x401351`–`0x401510`):
+##### 2. Disassemble `handle_case`
 
 ```asm
 401359: sub    rsp, 0x50            ; 80-byte local stack frame
@@ -37,7 +37,7 @@ No canary + no PIE + an unstripped `win_func` symbol that's never called from no
 
 Between the `gets()` call and the final `ret`, the code re-reads the return-address slot and compares it to a saved copy, printing flavor text ("case ID changed") if it differs. That check is purely cosmetic — it never blocks execution, it always falls through to `leave; ret`.
 
-3. Compute the offset to the saved return address:
+##### 3. Compute the offset to the saved return address
 
 ```
 0x50 (buffer/frame) + 0x8 (saved RBP) = 0x58 = 88 bytes
@@ -45,9 +45,11 @@ Between the `gets()` call and the final `ret`, the code re-reads the return-addr
 
 88 bytes of padding, then an 8-byte address, lands exactly on the return address.
 
-4. `win_func` (`0x401256`–`0x401305`) takes no arguments — it just `fopen`s `flag.txt`, `fgets`s it, and `printf`s it. A bare jump to `0x401256` is enough.
+##### 4. Locate the win function
 
-5. Exploit (`solve.py`, pwntools):
+`win_func` (`0x401256`–`0x401305`) takes no arguments — it just `fopen`s `flag.txt`, `fgets`s it, and `printf`s it. A bare jump to `0x401256` is enough.
+
+##### 5. Exploit
 
 ```python
 from pwn import *

@@ -55,30 +55,35 @@ don't rely on memory of the format. The shape is:
 
 ### Solution:
 
-1. <first concrete action — a command run, a file inspected — with its
-   output/finding folded in>
-2. <next deduction, building on 1>
-...
+##### 1. <short step title>
 
-<code/asm/output blocks inline where they support a step, using fenced
-blocks with a language tag where sensible>
+<prose for this step, with its output/finding folded in, plus any
+code/asm/output blocks that support it, using fenced blocks with a
+language tag where sensible>
+
+##### 2. <next deduction, building on 1>
+
+...
 
 **Flag:** `<the flag>`
 ```
 
+Each step is its own `##### N. <title>` (h5) heading — not a markdown
+numbered-list item — followed by that step's prose/code underneath.
+
 Rules for the rewrite:
 
-- Numbered steps are a **chain of reasoning to the flag**, not a tool
-  tutorial. Cut anything that teaches generic concepts the source notes
-  included for a player who's never done pwn/rev before (e.g. "what
-  pwntools is", "how to install a venv") — this repo's audience is the
-  author's future self, not a beginner.
+- Steps are a **chain of reasoning to the flag**, not a tool tutorial.
+  Cut anything that teaches generic concepts the source notes included
+  for a player who's never done pwn/rev before (e.g. "what pwntools is",
+  "how to install a venv") — this repo's audience is the author's future
+  self, not a beginner.
 - Keep the technical substance: addresses, offsets, disassembly excerpts,
   the actual exploit/solve script logic, and *why* each step follows
   from the last.
-- Prefer the shorter numbered-steps style unless the challenge genuinely
-  needs deep root-cause/mitigation analysis — check whether other
-  writeups for the same CTF lean short or long, and match them.
+- Prefer fewer, denser steps unless the challenge genuinely needs deep
+  root-cause/mitigation analysis — check whether other writeups for the
+  same CTF lean short or long, and match them.
 - End with the flag on its own bolded line. That is always the last
   line of the file.
 
