@@ -391,3 +391,8 @@
         - name: aptitude-test
           link: aptitude-test
 
+    - name: crackmes-one
+      link: crackmes-one
+      items:
+        - name: s4r-obfuscation1
+          link: s4r-obfuscation1
