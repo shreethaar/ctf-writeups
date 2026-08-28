@@ -10,6 +10,7 @@ The binary is heavily virtualized. Find the correct input values to get the "val
 - Category: rev
 - Difficulty: 5.0
 - Challenge author: Louis12345678
+- Challenge link: [crackmes.one](https://crackmes.one/crackme/6a90b8e9585e8875bcbebd76)
 - Platform: Windows x86-64 (PE32+ console), solved from Linux
 
 Two things make this one awkward, and neither is the virtualization. The first is host: it is a Windows PE, and on this machine neither `winedbg` nor `gdb` can debug a 64-bit guest, so the usual breakpoint-and-look move is unavailable. The second is that the checker is **completely branch-free** — the native basic-block trace is byte-identical for every input, so instruction counts, path divergence and timing all leak exactly nothing. What defeats it is that the VM still has to *build* its expected key somewhere, and it builds it on the stack right next to the two verdict strings. Once you can watch memory at all, the answer is sitting in plain sight.
