@@ -9,3 +9,4 @@ Solved:
 - [LLVMfuscator Virtualized CrackMe!](https://shreethaar.github.io/ctf-writeups/writeups/2026/crackmes-one/louis12345678-llvmfuscator-virtualized-crackme/) (rev) — Louis12345678, difficulty 5.0
 - [Schizo](https://shreethaar.github.io/ctf-writeups/writeups/2026/crackmes-one/s3c-cult-schizo/) (rev) — S3c_Cult, difficulty 3.0
 - [Ninth Circle](https://shreethaar.github.io/ctf-writeups/writeups/2026/crackmes-one/whistledev-ninth-circle/) (rev) — WhistleDev, difficulty 5.0
+- [GO GO GO - Harmful Logic](https://shreethaar.github.io/ctf-writeups/writeups/2026/crackmes-one/s0k1t-go-go-go-harmful-logic/) (rev) — s0k1t, difficulty 2.0
