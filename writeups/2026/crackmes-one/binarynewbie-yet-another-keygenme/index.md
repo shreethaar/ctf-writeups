@@ -10,6 +10,7 @@ layout: default
 - Category: rev
 - Difficulty: 3.0
 - Challenge author: BinaryNewbie
+- Challenge link: [crackmes.one](https://crackmes.one/crackme/5d7c66d833c5d46f00e2c45b)
 - Platform: Linux x86-64 (ELF PIE, dynamically linked, stripped)
 
 There's no flag format — the goal is a keygen: given a username, produce a password the binary accepts. Usage is `./keygenme <username> <filepath>`, and the password is read from a *file* rather than stdin. The binary reports its verdict by overwriting that same file with `G00d P422w0rd` or `B4d P422w0RD`.
