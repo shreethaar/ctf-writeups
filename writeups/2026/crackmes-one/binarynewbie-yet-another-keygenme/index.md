@@ -186,6 +186,20 @@ if (!((P % S) * 5 & 0xf)) sub_1560(a1);   // win
 
 Branch A is plainly the weaker one, and it's also the one that admits short keys: any length except 10 qualifies, including **1**.
 
+Nine user functions in total, and the whole program fits in one picture:
+
+![Call graph of keygenme, built from kuna's decompilation](callgraph.png)
+
+The graph is built from kuna's own output rather than a second disassembler. `decompile-all --json` carries the decompiled C for every function in its `code` field, so scanning each body for the names of other functions yields the call edges directly — a short pass over the JSON that emits DOT for Graphviz to lay out:
+
+```bash
+kuna decompile-all ./keygenme-fixed --json > all.json
+# scan each function's "code" for callee names -> callgraph.dot
+dot -Tpng -Gdpi=140 callgraph.dot -o callgraph.png
+```
+
+radare2 draws the same shape in one step — `r2 -A ./keygenme-fixed`, then `agCd` — on the header-repaired copy, and that's the quicker route if the picture is all you want. It does drop one node, though. `r2 -A` lists 30 functions to kuna's 35, and `sub_1920` is not among them: it's an outlined copy of the 10-character alnum username check that `main` performs inline, and nothing in the file references it — no call, no jump, and no 4- or 8-byte word anywhere holding `0x1920`. r2 discovers functions by following cross-references, so an unreferenced one is invisible to it, while kuna's pattern-based discovery finds it regardless. Dead code the compiler emitted and never wired up, which is why it's drawn dashed.
+
 ##### 6. Keygen, and checking the model instead of trusting it
 
 Reimplementing branch A in Python with explicit `mod 2**64` wrapping and searching alphanumeric keys shortest-first finds a single-character key for essentially every username. Before believing any of it, though, the model is worth differential-testing against the real binary — the two accumulator expressions depend on C precedence subtleties (`a + (b ^ i) & 0xf` is `(a + (b ^ i)) & 0xf`, not `a + ((b ^ i) & 0xf)`), and getting either wrong would still produce plausible-looking keys.
