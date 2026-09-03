@@ -10,6 +10,7 @@ layout: default
 - Category: rev / crypto
 - Difficulty: 3.0
 - Challenge author: 4aca7f6c
+- Challenge link: [crackmes.one](https://crackmes.one/crackme/60d8d7bd33c5d410b8843087)
 - Platform: Linux x86-64 (ELF PIE, dynamically linked, stripped), needs AVX2 + RDRAND
 
 The same binary as [EASY](../4aca7f6c-cryptoleaks-easy/), listening on its second port. It is still a TCP server that draws a fresh key from `RDRAND` per connection and then leaks a byte of AES state with every one of a thousand free encryptions — but the key is now 32 bytes, and the leak no longer comes from a fixed round. Half the hints describe the final round and half describe the one before it, and the round before the last sits behind MixColumns, which is what makes this side look like it needs a `2**32` search per column. It doesn't, because MixColumns is linear.

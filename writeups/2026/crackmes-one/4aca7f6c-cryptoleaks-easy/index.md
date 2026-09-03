@@ -10,6 +10,7 @@ layout: default
 - Category: rev / crypto
 - Difficulty: 3.0
 - Challenge author: 4aca7f6c
+- Challenge link: [crackmes.one](https://crackmes.one/crackme/60d8d7bd33c5d410b8843087)
 - Platform: Linux x86-64 (ELF PIE, dynamically linked, stripped), needs AVX2 + RDRAND
 
 Unusual shape for a crackme: there is no password prompt and nothing to patch. The binary is a **TCP server** that picks a fresh AES key from `RDRAND` on every connection, then volunteers a thousand encryptions of random plaintexts — each one accompanied by a leaked byte of internal cipher state. You have to guess the key, and the author is explicit that patching or pulling the flag out of the file doesn't count. So the whole challenge is a side-channel attack: the crackme *is* the leaky implementation.
