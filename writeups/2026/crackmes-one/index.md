@@ -13,3 +13,4 @@ Solved:
 - [Yet Another Keygenme/Crackme](https://shreethaar.github.io/ctf-writeups/writeups/2026/crackmes-one/binarynewbie-yet-another-keygenme/) (rev) — BinaryNewbie, difficulty 3.0
 - [cryptoleaks — EASY](https://shreethaar.github.io/ctf-writeups/writeups/2026/crackmes-one/4aca7f6c-cryptoleaks-easy/) (rev/crypto) — 4aca7f6c, difficulty 3.0
 - [cryptoleaks — HARD](https://shreethaar.github.io/ctf-writeups/writeups/2026/crackmes-one/4aca7f6c-cryptoleaks-hard/) (rev/crypto) — 4aca7f6c, difficulty 3.0
+- [RustVMgeddon](https://shreethaar.github.io/ctf-writeups/writeups/2026/crackmes-one/re-1333333337-rustvmgeddon/) (rev) — Re_1333333337, unsolvable as shipped (bytecode bug)
