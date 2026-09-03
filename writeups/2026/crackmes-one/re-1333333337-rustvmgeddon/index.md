@@ -213,6 +213,48 @@ aecc68a1059106ffb693fa8bf38b870e8ed4bb0ac863c00b75460f47834cfb91  rustvmgeddon
 
 The patched build grants on *every* input including the empty one, which confirms two things at once: the reading of the ISA is exact, and the input genuinely has no bearing on the verdict. The untouched original denies everything.
 
+##### 7. Compared with the published solution
+
+There is an accepted solution for this crackme by **Berardinis**, and it lands on the same bottom line — no input passes, so the binary has to be patched — but by a different route and from a different reading of the VM. Its patches work: the archive it ships prints `Access Granted.` for every input, which I confirmed by running it.
+
+Where it diverges is the origin of the bytecode:
+
+> The input string is then hashed using **SHA-256**. The first 20 bytes of the resulting hash are interpreted as bytecode for a custom stack-based virtual machine.
+
+and, following from that, its explanation of why the challenge cannot be solved by input — that doing so would require a partial preimage on SHA-256, which is infeasible.
+
+The bytecode is not hash-derived. It is the 20-byte constant from `.rodata:0x4e000` plus the `0x55321076` immediate, and the digest at `[rsp+0x80]` is never read at all. Two cheap experiments separate the two models. Changing a single byte of `.rodata:0x4e000` from `01` to `00`, leaving the entire SHA-256 path untouched, changes what the VM does — and changes it identically for every input:
+
+```bash
+$ python3 -c "d=bytearray(open('rustvmgeddon','rb').read()); d[0x4e000]=0x00; \
+              open('one_byte_test','wb').write(d)"          # 0x00 ^ 0xAA = 0xAA, not an opcode
+$ chmod +x one_byte_test && python3 run.py ./one_byte_test deadbeef hello
+'deadbeef'   -> 'Enter input: Invalid opcode: 0xAA'
+'hello'      -> 'Enter input: Invalid opcode: 0xAA'
+```
+
+And the shipped binary is stable across inputs where the hash model predicts noise. Of the 256 possible values for the first decoded byte, only five are executable opcodes and one is `HALT`; the other 250 print `Invalid opcode: 0x..`. So a hash-derived program should print that in roughly 97.7% of runs. It never does:
+
+```
+$ # 30 random inputs, pristine binary
+   30x  'Access Denied.'
+```
+
+The misreading is an easy one to fall into, and it is worth recording precisely because the binary sets the trap. `[rsp+0x110]` really is part of the SHA-256 computation — it holds the final padding block written at `0x8bf3`-`0x8c17` — and the VM really does fetch its instructions from `[rsp+0x110]`. The only thing separating those two facts is the `movaps` at `0x8ca5` that overwrites the buffer with the `.rodata` constant in between. Miss that single instruction and "the VM runs on the hash" is the natural conclusion; the SHA-256 is positioned to be mistaken for the mechanism rather than merely ignored.
+
+The anti-debug description differs too. The published solution reads the check as testing whether `TracerPid` is non-zero, and attributes the spurious blocking it observed on clean bare-metal Debian to the anti-VM check. As step 2 shows, the test is `ends_with('0')` against a field that `PTRACE_TRACEME` has just populated with the parent's PID, which is why it fires on honest machines about nine times in ten — and why it does not need patching at all.
+
+One last difference worth noting for anyone diffing the two: the published archive carries four patches, not the three its writeup documents.
+
+```
+0x84e5  0f 84 67 04 00 00  ->  e9 ba 04 00 00 90    jmp 0x89a4     documented
+0x8d1f  0f 83 42 02 00 00  ->  e9 0a 01 00 00 90    jmp 0x8e2e     documented
+0x8e28  0f 85 83 00 00 00  ->  90 90 90 90 90 90    NOP the cmp    undocumented
+0x8e69  e9 a6 fe ff ff     ->  e9 f9 00 00 00       jmp 0x8f67     documented
+```
+
+The undocumented one is inert. Patching `0x8d1f` turns it into an *unconditional* `jmp 0x8e2e`, and every opcode handler returns through `0x8d17` into `0x8d1f`, so control reaches the success printer after the VM's very first instruction. `CHECK` at `0x8e0f` is never executed, and NOPping its mismatch branch cannot matter. That is the real structural difference between the two approaches: forcing the outcome exits the interpreter after one instruction and so never has to be right about the ISA, whereas repairing the bytecode makes the VM compute the target itself and lets `CHECK` succeed on its own terms.
+
 So there is no accepting password. The value the challenge was built around — embedded in its own bytecode as the operands of the PUSHes that were never emitted, and hoisted into `rbx` as the comparison target — is:
 
 **Flag:** `deadbeeffedcba98`
@@ -221,6 +263,6 @@ So there is no accepting password. The value the challenge was built around — 
 
 An anti-debug check can be the vulnerability. `ptrace(PTRACE_TRACEME)` is normally paired with a `TracerPid` read as belt-and-braces, but the two interact: `TRACEME` *succeeding* is what populates `TracerPid` with the parent's PID, so the second check is reading a value the first one just created. Testing it with `ends_with('0')` instead of `== "0"` turned a deterministic guard into a ~1-in-10 dice roll that mostly blocks legitimate runs. When a protection behaves non-deterministically with no debugger present, the flakiness itself is the lead worth pulling.
 
-Verify that a decoy is a decoy before spending time on it. SHA-256 is expensive-looking and draws attention, and here it was reachable, correct, and completely dead — one `awk`/`grep` pass over the disassembly for reads of the digest buffer settled it in a minute and redirected the whole analysis. "Which instructions consume this value?" is usually a faster question than "what does this algorithm compute?".
+Verify that a decoy is a decoy before spending time on it. SHA-256 is expensive-looking and draws attention, and here it was reachable, correct, and completely dead — one `awk`/`grep` pass over the disassembly for reads of the digest buffer settled it in a minute and redirected the whole analysis. "Which instructions consume this value?" is usually a faster question than "what does this algorithm compute?". The published solution treats the digest as the VM's bytecode and concludes the challenge needs a SHA-256 partial preimage — a much harder-sounding wrong answer that a single check for readers of that buffer rules out.
 
 Patch to *disprove*, not just to bypass. The interesting result here was negative, and a hand trace saying "`CHECK` sees one byte" is not very convincing on its own. Repairing the bytecode in a scratch copy and watching it grant access on every input — including the empty string — is positive evidence for both the ISA decode and the claim that the input is unused, and it costs one file copy. Keeping the original pristine and diffing behaviour against it is what makes the comparison mean anything.
