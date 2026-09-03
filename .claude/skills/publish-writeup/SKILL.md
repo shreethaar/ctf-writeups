@@ -3,11 +3,13 @@ name: publish-writeup
 description: |
   Converts raw CTF challenge notes (draft writeups, README hints, solve
   scripts, screenshots) from an arbitrary source folder into this repo's
-  house writeup style, places them at writeups/<year>/<ctf>/<challenge>/,
+  house writeup style, generates a curated call graph for rev/pwn
+  targets, places them at writeups/<year>/<ctf>/<challenge>/,
   updates _data/navigation.yml and the CTF's index.md, commits locally,
   and asks for confirmation before pushing. Use whenever the user has
   solved a CTF challenge and wants their raw notes turned into a published
   writeup on shreethaar.github.io/ctf-writeups.
+version: 1.1.0
 ---
 
 # Publish a CTF writeup
@@ -128,7 +130,105 @@ Rules for the rewrite:
   list — e.g. under a "not solved live, written up from analysis /
   community solutions" heading — rather than implying a live solve.
 
-## Step 3 — Place files
+## Step 3 — Add a call graph (rev / pwn challenges)
+
+A picture of how execution moves through the binary is usually the
+highest-value figure in a rev writeup: the reader gets the shape of the
+program — entry, the checks, the win and lose sinks — before reading a
+line of decompiled C. Add one whenever the challenge has more than two
+or three interesting functions. Skip it when the whole thing is a
+single `main`, or when nothing was reversed (crypto, web).
+
+**Know which graph you're drawing** — these are different objects with
+different tooling, and the words get used interchangeably:
+
+- **Call graph** — nodes are *functions*, edges are calls. This is the
+  one that answers "how does this program flow", and it's what belongs
+  in almost every rev writeup.
+- **Control-flow graph (CFG)** — nodes are *basic blocks within one
+  function*, edges are branches. Worth including only when a single
+  function is the whole puzzle (a VM dispatch loop, an obfuscated
+  checker) and its internal branching is the point.
+
+### Prerequisite
+
+Graphviz does the layout and is needed either way. Check first — it is
+often not installed:
+
+```bash
+dot -V || echo "install graphviz"        # Arch: sudo pacman -S graphviz
+```
+
+Installing needs a password, so ask the user to run it (`! sudo pacman
+-S graphviz`) rather than attempting sudo.
+
+### Generating it
+
+The binary has to parse before either route works — repair a corrupted
+header first, since a broken ELF stops r2 exactly as it stops a
+decompiler.
+
+**radare2 — fastest, one command:**
+
+```bash
+r2 -A ./challenge
+> agCd > callgraph.dot         # whole-program call graph, DOT format
+> agfd @ sym.check             # CFG of one function, DOT format
+> q
+dot -Tpng -Gdpi=140 callgraph.dot -o callgraph.png
+```
+
+**From the decompiler — when the labels need to match your analysis:**
+`kuna decompile-all ./challenge --json` carries a `code` field per
+function, so scanning each body for the names of other functions gives
+the call edges, and you emit DOT yourself. More work, but you control
+node text and styling, and it sees functions r2 misses (below).
+
+### Cross-check before trusting it
+
+`r2 -A` discovers functions by following cross-references, so a
+function that nothing references is simply absent from its graph.
+Compare counts (`kuna functions --json` against r2's `afl | wc -l`) and
+chase any gap — an uncalled function is usually compiler-emitted dead
+code, which is itself worth a sentence in the writeup.
+
+Never ship an auto-generated graph unread. Tools label nodes by
+address, not by behaviour, and a confidently mislabeled node teaches
+the reader something false. Check every label against your own
+analysis before committing the image.
+
+### Make it readable
+
+Raw `agCd` output is a hairball. Curate it:
+
+- Drop libc/PLT nodes. Keep a single shared `exit` sink if every
+  terminal path reaches one — that alone makes the structure legible.
+- Label nodes with what the function *does* alongside its address
+  (`sub_1a00 / 0x1a00 / parse key file`), never the address alone.
+- Label edges with the condition that takes them ("bad length",
+  "key == username").
+- Number the path to success and colour it, so the reader's eye follows
+  the winning route first.
+- Distinguish the sinks: success, failure and rejection are different
+  outcomes and should not look alike.
+
+### Placing it in the writeup
+
+- Put the image in the step where the functions it names have just been
+  introduced, so no label is a forward reference — usually right after
+  the step identifying the check and the win/lose paths.
+- Render to **PNG** (`-Tpng -Gdpi=140`) and commit it alongside
+  `index.md`, referenced relatively:
+  `![Call graph of challenge](callgraph.png)`. Precedent for images
+  living next to the writeup: `writeups/2026/crackmesone-ctf/`.
+- Give it real alt text describing the graph, not "graph".
+- **Do not commit the graph generator script.** Solve/exploit scripts
+  belong in the repo (Step 4); a throwaway DOT emitter does not.
+  Describe the pipeline in prose or a short shell block instead — and
+  make sure the surrounding text doesn't then reference a file that was
+  never shipped.
+
+## Step 4 — Place files
 
 - Writeup: `writeups/<year>/<ctf-slug>/<challenge-slug>/index.md`
   (create parent dirs as needed). Match the challenge-slug casing style
@@ -138,17 +238,19 @@ Rules for the rewrite:
   the writeup references it (matches convention, e.g.
   `writeups/2024/PatriotCTF/slingshot/solve.py`).
 - Copy screenshots actually referenced by the writeup, alongside it.
+- Copy the call-graph PNG from Step 3 if one was made, alongside
+  `index.md` — but not the script that generated it.
 - Do **not** copy the raw challenge binary/zip/flag.txt into the repo —
   none of the existing writeups do this for binary-heavy pwn/rev
   challenges; keep the repo lean. Flag this decision to the user only if
   a source folder's writeup can't stand on its own without the binary.
 
-## Step 4 — Update navigation and CTF index
+## Step 5 — Update navigation and CTF index
 
 - `_data/navigation.yml`: find (or create) the `<year>` block, then the
   `<ctf-slug>` entry under it, and add a `- name: / link:` item for the
   new challenge under its `items:` list, matching the slug used in
-  Step 3.
+  Step 4.
 - `writeups/<year>/<ctf-slug>/index.md`: if it already exists, add the
   new challenge to whatever "solved" list/format it already uses. If it
   doesn't exist yet (new CTF), create a minimal one matching the pattern
@@ -159,7 +261,7 @@ Rules for the rewrite:
   `- [HRBot](https://shreethaar.github.io/ctf-writeups/writeups/<year>/<ctf-slug>/<challenge-slug>/) (pwn)`,
   matching the convention in `writeups/2025/neraca/index.md`.
 
-## Step 5 — Commit
+## Step 6 — Commit
 
 Stage exactly the files touched (writeup dir, `navigation.yml`, CTF
 index.md) — never a broad `git add -A`. Commit with a short message
@@ -167,7 +269,7 @@ naming the CTF and challenge, e.g. `brunnerctf: add HRBot writeup`.
 Follow the repo's existing commit message style (check `git log`) —
 short, lowercase-ish, no body needed for a single writeup.
 
-## Step 6 — Push (confirm first)
+## Step 7 — Push (confirm first)
 
 Show the user the commit (`git show --stat` or similar) and ask before
 running `git push`. Never push without that explicit go-ahead in this
@@ -179,3 +281,21 @@ This skill is meant to be re-run per challenge/per CTF. Each run should
 independently re-check existing writeups for style rather than trusting
 a cached impression from a previous run — the house style is defined by
 whatever's actually in `writeups/`, which may evolve.
+
+## Versioning
+
+This skill is versioned, and mirrored into the writeups repo at
+`.claude/skills/publish-writeup/SKILL.md`, so its history travels with
+the site it publishes to. `.claude/` is a dot-directory, so Jekyll
+ignores it and none of it is published.
+
+After editing this skill:
+
+1. Bump `version:` in the frontmatter — patch for wording, minor for a
+   new rule or step, major for a reorganisation that changes how the
+   skill is run.
+2. Add an entry to `CHANGELOG.md` beside this file saying what changed
+   and why.
+3. Copy the edited file to the repo's `.claude/skills/publish-writeup/`
+   and commit it together with the changelog, so the live skill at
+   `~/.claude/skills/publish-writeup/` and the tracked copy never drift.
