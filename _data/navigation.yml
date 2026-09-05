@@ -370,6 +370,12 @@
           link: patch-tuesday
         - name: flag-pointer-register
           link: flag-pointer-register
+        - name: purgatory
+          link: purgatory
+        - name: small-guy
+          link: small-guy
+        - name: harald-blatann
+          link: harald-blatann
     - name: uoftctf 
       link: uoftctf
       items:

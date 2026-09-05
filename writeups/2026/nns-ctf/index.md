@@ -10,3 +10,6 @@ I managed to solve:
 - [Scratch Space](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/scratch-space/) (rev)
 - [Patch Tuesday](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/patch-tuesday/) (rev)
 - [Flag Pointer Register](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/flag-pointer-register/) (rev)
+- [purgatory](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/purgatory/) (rev)
+- [small guy](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/small-guy/) (rev)
+- [Harald Blåtann](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/harald-blatann/) (rev)
