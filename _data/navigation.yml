@@ -376,6 +376,12 @@
           link: small-guy
         - name: harald-blatann
           link: harald-blatann
+        - name: no-win
+          link: no-win
+        - name: pset1
+          link: pset1
+        - name: coins
+          link: coins
     - name: uoftctf 
       link: uoftctf
       items:

@@ -13,3 +13,6 @@ I managed to solve:
 - [purgatory](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/purgatory/) (rev)
 - [small guy](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/small-guy/) (rev)
 - [Harald Blåtann](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/harald-blatann/) (rev)
+- [No win](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/no-win/) (pwn)
+- [pset1](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/pset1/) (pwn)
+- [coins](https://shreethaar.github.io/ctf-writeups/writeups/2026/nns-ctf/coins/) (pwn)
