@@ -351,6 +351,13 @@
 - name: 2026
   link: /writeups/2026 
   items: 
+    - name: nns-ctf
+      link: nns-ctf
+      items:
+        - name: byoc
+          link: byoc
+        - name: echo-chamber
+          link: echo-chamber
     - name: uoftctf 
       link: uoftctf
       items:
