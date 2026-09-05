@@ -358,6 +358,18 @@
           link: byoc
         - name: echo-chamber
           link: echo-chamber
+        - name: no-strings-attached
+          link: no-strings-attached
+        - name: open-secret
+          link: open-secret
+        - name: time-lock
+          link: time-lock
+        - name: scratch-space
+          link: scratch-space
+        - name: patch-tuesday
+          link: patch-tuesday
+        - name: flag-pointer-register
+          link: flag-pointer-register
     - name: uoftctf 
       link: uoftctf
       items:
