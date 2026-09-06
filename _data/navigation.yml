@@ -351,6 +351,17 @@
 - name: 2026
   link: /writeups/2026 
   items: 
+    - name: sunctf
+      link: sunctf
+      items:
+        - name: they-said-we-have-flying-cars
+          link: they-said-we-have-flying-cars
+        - name: dreams-lift-us-up
+          link: dreams-lift-us-up
+        - name: imagine-using-fable
+          link: imagine-using-fable
+        - name: being-chalant-is-cool
+          link: being-chalant-is-cool
     - name: nns-ctf
       link: nns-ctf
       items:
