@@ -8,3 +8,4 @@ I managed to solve:
 - [Dreams Lift Us Up](https://shreethaar.github.io/ctf-writeups/writeups/2026/sunctf/dreams-lift-us-up/) (pwn)
 - [Imagine Using Fable](https://shreethaar.github.io/ctf-writeups/writeups/2026/sunctf/imagine-using-fable/) (pwn)
 - [Being Chalant Is Cool](https://shreethaar.github.io/ctf-writeups/writeups/2026/sunctf/being-chalant-is-cool/) (pwn)
+- [Blackout Sunday](https://shreethaar.github.io/ctf-writeups/writeups/2026/sunctf/blackout-sunday/) (forensic)
