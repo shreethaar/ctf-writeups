@@ -9,3 +9,4 @@ I managed to solve:
 - [Imagine Using Fable](https://shreethaar.github.io/ctf-writeups/writeups/2026/sunctf/imagine-using-fable/) (pwn)
 - [Being Chalant Is Cool](https://shreethaar.github.io/ctf-writeups/writeups/2026/sunctf/being-chalant-is-cool/) (pwn)
 - [Blackout Sunday](https://shreethaar.github.io/ctf-writeups/writeups/2026/sunctf/blackout-sunday/) (forensic)
+- [Wasting Time](https://shreethaar.github.io/ctf-writeups/writeups/2026/sunctf/wasting-time/) (misc)
