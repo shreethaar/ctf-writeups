@@ -350,7 +350,12 @@
           link: packed-with-flag
 - name: 2026
   link: /writeups/2026 
-  items: 
+  items:
+    - name: malops-io
+      link: malops-io
+      items:
+        - name: aurawiper
+          link: aurawiper
     - name: sunctf
       link: sunctf
       items:
