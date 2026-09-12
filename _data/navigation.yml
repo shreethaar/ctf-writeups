@@ -371,6 +371,17 @@
           link: blackout-sunday
         - name: wasting-time
           link: wasting-time
+    - name: k17ctf
+      link: k17ctf
+      items:
+        - name: etch-a-sketch
+          link: etch-a-sketch
+        - name: srev
+          link: srev
+        - name: monoid
+          link: monoid
+        - name: evilgram
+          link: evilgram
     - name: nns-ctf
       link: nns-ctf
       items:
