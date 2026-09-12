@@ -382,6 +382,14 @@
           link: monoid
         - name: evilgram
           link: evilgram
+        - name: big-win
+          link: big-win
+        - name: huge-binary-1
+          link: huge-binary-1
+        - name: make-a-wish
+          link: make-a-wish
+        - name: java-notes
+          link: java-notes
     - name: nns-ctf
       link: nns-ctf
       items:
