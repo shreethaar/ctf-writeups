@@ -452,6 +452,13 @@
           link: guessing-game
         - name: aptitude-test
           link: aptitude-test
+    - name: cat-ctf
+      link: cat-ctf
+      items:
+        - name: duo
+          link: duo
+        - name: silent-stranger
+          link: silent-stranger
 
     - name: crackmes-one
       link: crackmes-one
