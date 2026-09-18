@@ -491,3 +491,10 @@
           link: 4aca7f6c-cryptoleaks-hard
         - name: re-1333333337-rustvmgeddon
           link: re-1333333337-rustvmgeddon
+    - name: defcamp-ctf
+      link: defcamp-ctf
+      items:
+        - name: ratatouille
+          link: ratatouille
+        - name: hollowdex
+          link: hollowdex
