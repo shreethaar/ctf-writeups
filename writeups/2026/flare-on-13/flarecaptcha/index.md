@@ -6,7 +6,15 @@
 
 There is no binary. The challenge is `flarecaptcha.html`, a fake reCAPTCHA v2 checkbox, and the flag is built in the page's own JavaScript. Every input to the decryption key comes from the page itself: which mouse button you press, how long you hold it, the page's charset, and the length of one function's source text.
 
-### Solution:
+### TL;DR
+
+- Open challenge through python server (python3 -m http.server)
+- Right-click and hold on the click box  
+- Success banner will appears
+
+![solve.png](solve.png)
+
+### Solution
 
 ##### 1. Left-clicking is the trap
 
