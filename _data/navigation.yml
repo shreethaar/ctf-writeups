@@ -498,3 +498,8 @@
           link: ratatouille
         - name: hollowdex
           link: hollowdex
+    - name: flare-on-13
+      link: flare-on-13
+      items:
+        - name: flarecaptcha
+          link: flarecaptcha
