@@ -503,3 +503,11 @@
       items:
         - name: flarecaptcha
           link: flarecaptcha
+        - name: ghoststream
+          link: ghoststream
+        - name: toxicminer
+          link: toxicminer
+        - name: catthief
+          link: catthief
+        - name: flareon13-doc
+          link: flareon13-doc
