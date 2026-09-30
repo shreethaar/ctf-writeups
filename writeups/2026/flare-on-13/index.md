@@ -7,3 +7,4 @@ I managed to solve:
 - [ToxicMiner](https://shreethaar.github.io/ctf-writeups/writeups/2026/flare-on-13/toxicminer/) (rev)
 - [CatThief](https://shreethaar.github.io/ctf-writeups/writeups/2026/flare-on-13/catthief/) (rev)
 - [FlareOn13.doc](https://shreethaar.github.io/ctf-writeups/writeups/2026/flare-on-13/flareon13-doc/) (rev)
+- [Threat Invaders](https://shreethaar.github.io/ctf-writeups/writeups/2026/flare-on-13/threat-invaders/) (rev)
